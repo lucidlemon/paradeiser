@@ -53,8 +53,8 @@ module.exports = function(grunt) {
         },
         watch: {
             styles: {
-                files: ['dev/*.scss'], // which files to watch
-                tasks: ['sass', 'postcss'],
+                files: ['dev/*.scss', 'dev/*.coffee'], // which files to watch
+                tasks: ['sass', 'postcss', 'coffee'],
                 options: {
                     nospawn: true,
                     livereload: true

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="">
     <title>Paradeiser Demo</title>
 
     <style>
@@ -27,37 +28,44 @@
 </head>
 <body>
     <div class="paradeiser">
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="http://danielwinter.at/apple-touch-icon_76x76.png" alt="Logo of Daniel Winter" class="logo">
-                </a>
-            </li>
-            <li class="active">
-                <a href="#">
-                    <img src="img/menu_home.svg" alt="Navigate to Home" class="icon">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="img/menu_shop.svg" alt="Navigate to Shop" class="icon">
-                    Shop
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="img/menu_cart.svg" alt="Navigate to Cart" class="icon">
-                    Cart
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="img/menu_contact.svg" alt="Navigate to Contact" class="icon">
-                    Contact
-                </a>
-            </li>
-        </ul>
+        <a href="#">
+            <img src="http://danielwinter.at/apple-touch-icon_76x76.png" alt="Logo of Daniel Winter" class="logo">
+        </a>
+        <a href="#">
+            <div class="icon_canvas">
+                <img src="img/menu_home.svg" alt="Navigate to Home" class="icon">
+            </div>
+            <span>Home</span>
+        </a>
+        <a href="#">
+            <div class="icon_canvas">
+                <img src="img/menu_shop.svg" alt="Navigate to Shop" class="icon">
+            </div>
+            <span>Shop</span>
+        </a>
+        <a href="#">
+            <div class="icon_canvas">
+                <img src="img/menu_cart.svg" alt="Navigate to Cart" class="icon">
+            </div>
+            <span>Cart</span>
+        </a>
+        <a href="#">
+            <div class="icon_canvas">
+                <img src="img/menu_contact.svg" alt="Navigate to Contact" class="icon">
+            </div>
+            <span>Contact</span>
+        </a>
+        <span class="dropdown">
+            <div class="icon_canvas">
+                <img src="img/menu_overflow.svg" alt="" class="icon">
+            </div>
+            <span>More</span>
+            <ul class="children">
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Yolo</a></li>
+            </ul>
+        </span>
     </div>
     <div class="content">
         <h1>Get rid of those hamburgers.</h1>
@@ -73,6 +81,7 @@
         <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
     </div>
 
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="../dist/min/paradeiser.min.js"></script>
 </body>
 </html>
