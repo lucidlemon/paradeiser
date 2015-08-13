@@ -1,7 +1,7 @@
 paradeiser_open = false
 
 $ '.paradeiser_dropdown :not(.children)'
-.on 'click touch', (event) ->
+.on 'click', (event) ->
   console.log 'preventing link'
   event.preventDefault()
   paradeiser_link = $ this
@@ -25,7 +25,7 @@ $ '.paradeiser_dropdown :not(.children)'
 
 $ '<div id="paradeiser-greybox"></div>'
 .insertAfter '.paradeiser'
-.on 'click touch', (event) ->
+.on 'click', (event) ->
   if paradeiser_open == true
     paradeiser_open = false
 
