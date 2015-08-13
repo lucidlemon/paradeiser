@@ -119,6 +119,7 @@
   opacity: 0;
   transition: opacity 0.2s;
   pointer-events: none;
+  z-index: 500;
 
   backdrop-filter: blur(10px) saturate(100%);
   &.visible {
