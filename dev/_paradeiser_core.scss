@@ -27,6 +27,7 @@
     font-weight: $paradeiser-font-weight;
     font-size: $paradeiser-link-font-size;
     font-family: $paradeiser-font-family;
+    cursor: pointer;
 
     align-items: center;
     flex-grow: 5;
@@ -57,7 +58,7 @@
 
   span {
     margin-top: 5px;
-    &.dropdown{
+    &.dropdown {
       margin-top: 0;
     }
   }
@@ -71,6 +72,7 @@
     position: fixed;
     top: $paradeiser-height;
     left: 0;
+    z-index: 998;
     visibility: hidden;
     margin: 0;
     padding: 0;
@@ -79,11 +81,11 @@
     background: $paradeiser-dropdown-background;
     text-align: center;
     opacity: 0;
-    transition: visbility, opacity 0.4s;
+    transition: opacity 0.4s;
     &.visible {
       visibility: visible;
       opacity: 1;
-      transition: visbility, opacity 0.4s;
+      transition: opacity 0.4s;
     }
     li {
       display: inline-block;
@@ -95,6 +97,11 @@
         width: 100%;
         color: #fff;
         font-size: 15px;
+      }
+      a, span {
+        &:hover {
+          background: lighten($paradeiser-dropdown-background, 5%);
+        }
       }
     }
   }
@@ -109,14 +116,14 @@
   height: 120%;
   background: rgba(0,0,0,0.8);
   opacity: 0;
-  transition: visbility, opacity 0.2s;
+  transition: opacity 0.2s;
   pointer-events: none;
 
   backdrop-filter: blur(10px) saturate(100%);
   &.visible {
     visibility: visible;
     opacity: 1;
-    transition: visbility, opacity 0.2s;
+    transition: opacity 0.2s;
     pointer-events: auto;
   }
 }

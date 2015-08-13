@@ -3,16 +3,17 @@ paradeiser_open = false
 $ '.dropdown'
 .on 'click touch', (event) ->
   event.preventDefault()
-  console.log 'clicking'
+#  console.log 'clicking'
   paradeiser_link = $ this
-  if paradeiser_link.is '.visible'
+  greybox = $ '#paradeiser-greybox'
+  if greybox.is '.visible'
     paradeiser_open = false
 
     paradeiser_link
     .find '.children'
     .removeClass 'visible'
 
-    $ '#paradeiser-greybox'
+    greybox
     .removeClass 'visible'
   else
     paradeiser_open = true
@@ -21,14 +22,16 @@ $ '.dropdown'
     .find '.children'
     .addClass 'visible'
 
-    $ '#paradeiser-greybox'
+    greybox
     .addClass 'visible'
+
+#  console.log paradeiser_open
 
 $ '<div id="paradeiser-greybox"></div>'
 .insertAfter '.paradeiser'
 .on 'click touch', (event) ->
   if paradeiser_open == true
-    console.log 'closing'
+#    console.log 'closing'
     $ '#paradeiser-greybox'
     .removeClass 'visible'
 

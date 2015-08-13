@@ -27,6 +27,7 @@
   font-weight: 400;
   font-size: 10px;
   font-family: -apple-system, -apple-system-body, "Roboto", "Helvetica Neue", "Segoe UI", "Arial", sans-serif;
+  cursor: pointer;
   align-items: center;
   flex-grow: 5;
   justify-content: center;
@@ -64,6 +65,7 @@
   position: fixed;
   top: 50px;
   left: 0;
+  z-index: 998;
   visibility: hidden;
   margin: 0;
   padding: 0;
@@ -72,12 +74,12 @@
   background: #4a4a4a;
   text-align: center;
   opacity: 0;
-  transition: visbility, opacity 0.4s;
+  transition: opacity 0.4s;
 }
 .paradeiser ul.visible {
   visibility: visible;
   opacity: 1;
-  transition: visbility, opacity 0.4s;
+  transition: opacity 0.4s;
 }
 .paradeiser ul li {
   display: inline-block;
@@ -91,6 +93,9 @@
   color: #fff;
   font-size: 15px;
 }
+.paradeiser ul li a:hover, .paradeiser ul li span:hover {
+  background: #575757;
+}
 
 #paradeiser-greybox {
   position: fixed;
@@ -101,13 +106,13 @@
   height: 120%;
   background: rgba(0, 0, 0, 0.8);
   opacity: 0;
-  transition: visbility, opacity 0.2s;
+  transition: opacity 0.2s;
   pointer-events: none;
   backdrop-filter: blur(10px) saturate(100%);
 }
 #paradeiser-greybox.visible {
   visibility: visible;
   opacity: 1;
-  transition: visbility, opacity 0.2s;
+  transition: opacity 0.2s;
   pointer-events: auto;
 }
