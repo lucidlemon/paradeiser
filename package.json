@@ -1,6 +1,6 @@
 {
   "name": "paradeiser",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Event binding helper",
   "main": "dist/paradeiser.min.js",
   "private": true,
