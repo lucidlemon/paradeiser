@@ -1,1 +1,218 @@
-<h1>Hello World.</h1>
+<!doctype html>
+<html lang="en">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="prism.css">
+    <meta charset="UTF-8">
+    <title>Paradeiser</title>
+    <style>
+        body, html{
+            background: #FF7300;
+        }
+
+        *{
+            box-sizing: border-box;
+            font-family: 'Lato', sans-serif;
+            position: relative;
+        }
+
+        h1, h3, p, input, a.button, i, b{
+            color: #fff;
+        }
+
+        .center{
+            width: 100%;
+            text-align: center;
+        }
+        
+        .hero{
+            max-width: 640px;
+            margin: 160px auto;
+        }
+
+        h1{
+            margin: 10px 0;
+            font-weight: 300;
+            font-size: 60px;
+        }
+
+        h3{
+            margin: 0;
+            font-weight: 300;
+            font-size: 30px;
+        }
+
+        h3 a{
+            color: #fff;
+        }
+
+        p{
+            margin: 0;
+        }
+
+        code{
+            font-size: 12px;
+            line-height: 1.2em;
+        }
+
+        b{
+            font-weight: 900;
+        }
+
+        i{
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        img{
+            line-height: 0;
+            max-width: 100%;
+            height: auto;
+            margin: 0;
+            z-index: 50;
+        }
+
+        .wowbox{
+            background: #3D3D3D;
+            max-width: 640px;
+            width: 100%;
+            margin: -5px auto;
+            padding: 30px;
+            z-index: 99;
+            border-radius: 4px;
+        }
+
+        .wowbox p{
+            font-size: 28px;
+            text-align: left;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        input, a.button{
+            display: inline-block;
+            background: #3D3D3D;
+            padding: 5px 20px;
+            border: 0;
+            margin: 20px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 4px;
+            width: 300px;
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" href="bower_components/Paradeiser/dist/min/paradeiser.min.css">
+</head>
+<body>
+<div class="paradeiser">
+    <a href="http://lucidlemon.github.io/paradeiser/">
+        <img src="img/logo.svg" alt="Logo of Paradeiser" class="logo">
+    </a>
+    <a href="#">
+        <div class="paradeiser_icon_canvas">
+            <img src="http://danielwinter.at/apple-touch-icon-precomposed.png" alt="Navigate to Shop">
+        </div>
+        <span>Daniel</span>
+    </a>
+    <a href="https://github.com/lucidlemon/paradeiser">
+        <div class="paradeiser_icon_canvas">
+            <img src="img/github.svg" alt="Github Repo">
+        </div>
+        <span>Github</span>
+    </a>
+    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QMDCLRUXREX2W">
+        <div class="paradeiser_icon_canvas">
+            <img src="img/paypal.svg" alt="Donate">
+        </div>
+        <span>Donate</span>
+    </a>
+    <!-- and include the dropdown aswell - you need js for this -->
+    <span class="paradeiser_dropdown">
+        <div class="paradeiser_icon_canvas">
+            <img src="img/menu_overflow.svg" alt="">
+        </div>
+        <span>More</span>
+        <ul class="paradeiser_children">
+            <li><a href="https://varys.io">Varys.io</a></li>
+            <li><a href="https://userbrain.net">Userbrain.net</a></li>
+        </ul>
+    </span>
+</div>
+
+    <div class="center hero">
+        <h3>the web became <b>fat</b>.</h3>
+        <h1>let's put it on a diet.</h1>
+        <h3>get rid of those <b>burgers</b>.</h3>
+    </div>
+
+    <div class="center hero">
+        <p>Meet Paradeiser.</p>
+        <img src="https://raw.github.com/lucidlemon/paradeiser/master/demo/mockup_03.png" width="411" alt="">
+        <div class="wowbox">
+            <p>The <b>best</b> mobile navigation on this planet.<br>
+                1.3kb of <b>pure joy</b>. 0 calories. 0 carbohydrates.</p>
+            <h1>100% VEGAN.</h1>
+            <h1>100% HIPSTER.</h1>
+        </div>
+    </div>
+
+    <div class="center hero">
+        <h3>install.</h3>
+        <input type="text" readonly value="bower install Paradeiser">
+        <br>
+        <i>or just build get the source</i>
+        <br>
+        <a class="button" href="https://github.com/lucidlemon/paradeiser">Github</a>
+    </div>
+
+    <div class="center hero">
+        <h3>embed.</h3>
+<pre><code class="language-markup">
+&lt;div class="paradeiser">
+    &lt;a href="#">
+        &lt;img src="logo.png" alt="Logo" class="paradeiser_logo">
+    &lt;/a>
+    &lt;a href="#">
+        &lt;div class="paradeiser_icon_canvas">
+            &lt;img src="img/menu_home.svg" alt="Navigate to Home">
+        &lt;/div>
+        &lt;span>Home&lt;/span>
+    &lt;/a>
+    &lt;a href="#">
+        &lt;div class="paradeiser_icon_canvas">
+            &lt;img src="img/menu_shop.svg" alt="Navigate to Shop">
+        &lt;/div>
+        &lt;span>Shop&lt;/span>
+    &lt;/a>
+
+    &lt;!-- paste in as many links as you want -->
+
+    &lt;!-- and include the dropdown aswell - you need js for this -->
+    &lt;span class="paradeiser_dropdown">
+        &lt;div class="paradeiser_icon_canvas">
+            &lt;img src="img/menu_overflow.svg" alt="">
+        &lt;/div>
+        &lt;span>More&lt;/span>
+        &lt;ul class="paradeiser_children">
+            &lt;li>&lt;a href="#">Terms of Service&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">About Us&lt;/a>&lt;/li>
+        &lt;/ul>
+    &lt;/span>
+&lt;/div>
+</code></pre>
+
+    </div>
+
+
+<div class="center hero">
+    <h3>Made with ❤ by <a target="_blank" href="http://danielwinter.at/">Daniel Winter</a></h3>
+</div>
+
+
+
+    <script src="prism.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/Paradeiser/dist/min/paradeiser.min.js"></script>
+</body>
+</html>

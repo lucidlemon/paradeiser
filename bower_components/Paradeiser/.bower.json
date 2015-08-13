@@ -1,0 +1,32 @@
+{
+  "name": "paradeiser",
+  "location": "lucidlemon/paradeiser",
+  "version": "0.0.13",
+  "description": "Paradeiser is an easy to use menu for mobile views",
+  "homepage": "http://www.danielwinter.at/paradeiser",
+  "main": [
+    "dist/min/paradeiser.min.css",
+    "dist/min/paradeiser.min.js"
+  ],
+  "ignore": [
+    "*",
+    "!dist",
+    "!dist/**/*",
+    "!dev",
+    "!dev/**/*"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.0"
+  },
+  "devDependencies": {},
+  "_release": "0.0.13",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.13",
+    "commit": "beb30e1956793c8a4957199190dd4b68ca849857"
+  },
+  "_source": "git://github.com/lucidlemon/paradeiser.git",
+  "_target": "~0.0.13",
+  "_originalSource": "Paradeiser",
+  "_direct": true
+}

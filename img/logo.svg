@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="logo" sketch:type="MSLayerGroup">
+            <ellipse id="Oval-19" fill="#E64600" sketch:type="MSShapeGroup" cx="20" cy="19.9638052" rx="20" ry="19.9004975"></ellipse>
+            <polygon id="Star-1" fill="#FF7300" sketch:type="MSShapeGroup" points="25 18.0099502 20.8855032 19.9163237 21.6713022 15.8785599 18.3426044 13.0189996 22.9427516 12.4298978 25 8.75621891 27.0572484 12.4298978 31.6573956 13.0189996 28.3286978 15.8785599 29.1144968 19.9163237 "></polygon>
+            <path d="M26.1575805,13.7866102 C25.7459019,14.0138614 25.0030126,14.6245663 25.0030126,14.6245663 L25.1663171,14.8643074 C25.1663171,14.8643074 25.9775336,14.4618867 26.4291741,14.3572657 C26.8555622,14.2584943 27.8004028,14.2541303 27.8004028,14.2541303 L27.3474761,13.3303959 C27.3474761,13.3303959 26.5273898,13.5824713 26.1575805,13.7866102 Z" id="Path-140" fill="#E64600" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
