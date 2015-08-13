@@ -3,7 +3,7 @@
 
   paradeiser_open = false;
 
-  $('.dropdown').on('click touch', function(event) {
+  $('.dropdown').not('.children').on('click touch', function(event) {
     var greybox, paradeiser_link;
     event.preventDefault();
     paradeiser_link = $(this);

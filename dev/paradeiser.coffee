@@ -1,6 +1,7 @@
 paradeiser_open = false
 
 $ '.dropdown'
+.not '.children'
 .on 'click touch', (event) ->
   event.preventDefault()
   paradeiser_link = $ this
