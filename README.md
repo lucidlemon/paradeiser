@@ -1,4 +1,4 @@
-#Paradeiser
+# Paradeiser
 
 ### The only menu you will ever need to kill the hamburger.
 
@@ -15,6 +15,8 @@ So that's where _Paradeiser_ comes in. You get your most important links and eve
 ![Demo of Paradeiser](https://raw.github.com/lucidlemon/paradeiser/master/demo/cutout_03.png)
 
 And it only weighs 1.5kb gzipped (1kb if you go for the css-only method).
+
+
 
 ## Requirements
 
@@ -74,5 +76,23 @@ And then place this stuff right below your `<body>` opening tag:
         </div>
         <span>Contact</span>
     </a>
+    <span class="dropdown">
+        <div class="paradeiser_icon_canvas">
+            <img src="img/menu_overflow.svg" alt="">
+        </div>
+        <span>More</span>
+        <ul class="children">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Yolo</a></li>
+        </ul>
+    </span>
 </div>
 ```
+
+## Plans for the Future
+
+* Better animations on the popout
+* Javascript options instead of pure css
+* Desktop alternative for a full featured set
+* Support for one-page websites with automatic highlighting of the correct link
