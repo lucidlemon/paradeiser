@@ -1,13 +1,13 @@
 .paradeiser {
-  width: 100%;
-  height: 50px;
-  background: #FCFCFC;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.02), 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
-  z-index: 999;
   display: none;
+  width: 100%;
+  height: 50px;
+  background: #fcfcfc;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 768px) {
   .paradeiser {
@@ -15,70 +15,72 @@
   }
 }
 .paradeiser a, .paradeiser > span {
-  color: #9B9B9B;
-  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   margin: 0;
   padding: 0;
-  flex-grow: 5;
-  font-size: 10px;
   text-align: center;
-  font-family: "SegoeUI-Semilight", "Roboto", sans-serif;
-  position: relative;
+  text-decoration: none;
+  color: #9b9b9b;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 5;
+  font-weight: 300;
 }
 .paradeiser a.active, .paradeiser a:hover, .paradeiser > span.active, .paradeiser > span:hover {
-  background: #D2EBFF;
+  background: #d2ebff;
 }
-.paradeiser .icon_canvas {
+.paradeiser .paradeiser_icon_canvas {
+  display: block;
+  display: flex;
   width: 100%;
   height: 20px;
-  display: block;
   margin: 0 auto;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
-.paradeiser span {
-  margin-top: 3px;
-}
-.paradeiser .icon {
+.paradeiser .paradeiser_icon_canvas img {
+  display: block;
+  width: 100%;
   max-width: 20px;
   height: auto;
-  display: block;
   margin: 0 auto;
+}
+.paradeiser span {
+  margin-top: 3px;
 }
 .paradeiser .logo {
   width: 100%;
   max-width: 40px;
 }
 .paradeiser ul {
-  display: none;
   position: fixed;
   top: 50px;
   left: 0;
+  display: none;
   width: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
-  height: auto;
-  background: #4A4A4A;
   text-align: center;
+  background: #4a4a4a;
 }
 .paradeiser ul.visible {
   display: block;
 }
 .paradeiser ul li {
   display: inline-block;
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 .paradeiser ul li a {
-  padding: 15px 0;
+  font-size: 15px;
   display: inline-block;
   width: 100%;
-  font-size: 15px;
+  padding: 15px 0;
   color: #fff;
 }
 
@@ -86,7 +88,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 120%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+#paradeiser-greybox.visible {
+  display: block;
 }

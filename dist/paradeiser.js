@@ -11,17 +11,19 @@
     if (paradeiser_link.is('.visible')) {
       paradeiser_open = false;
       paradeiser_link.find('.children').removeClass('visible');
-      $('#paradeiser-greybox').remove();
+      return $('#paradeiser-greybox').removeClass('visible');
     } else {
       paradeiser_open = true;
       paradeiser_link.find('.children').addClass('visible');
-      $('<div id="paradeiser-greybox"></div>').insertAfter('.paradeiser').on('click touch', function(event) {
-        if (paradeiser_open === true) {
-          console.log('closing');
-          $('#paradeiser-greybox').remove();
-          $('.children').removeClass('visible');
-        }
-      });
+      return $('#paradeiser-greybox').addClass('visible');
+    }
+  });
+
+  $('<div id="paradeiser-greybox"></div>').insertAfter('.paradeiser').on('click touch', function(event) {
+    if (paradeiser_open === true) {
+      console.log('closing');
+      $('#paradeiser-greybox').removeClass('visible');
+      return $('.children').removeClass('visible');
     }
   });
 
