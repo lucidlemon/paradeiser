@@ -56,7 +56,10 @@
   }
 
   span {
-    margin-top: 3px;
+    margin-top: 5px;
+    &.dropdown{
+      margin-top: 0;
+    }
   }
 
   .logo {

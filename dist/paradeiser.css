@@ -51,7 +51,10 @@
   height: auto;
 }
 .paradeiser span {
-  margin-top: 3px;
+  margin-top: 5px;
+}
+.paradeiser span.dropdown {
+  margin-top: 0;
 }
 .paradeiser .logo {
   max-width: 40px;
