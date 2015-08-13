@@ -12,6 +12,8 @@ On the other hand other methods like a select box (also double click needed) or 
 
 So that's where _Paradeiser_ comes in. You get your most important links and even your company logo in the header bar, and for less important stuff you still have an overflow right there.
 
+![Demo of Paradeiser](https://raw.github.com/lucidlemon/paradeiser/master/demo/cutout_03.png)
+
 And it only weighs 1.5kb gzipped (1kb if you go for the css-only method).
 
 ## Requirements
