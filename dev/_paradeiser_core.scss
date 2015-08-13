@@ -58,12 +58,13 @@
 
   span {
     margin-top: 5px;
+    font-size: $paradeiser-link-font-size;
     &.dropdown {
       margin-top: 0;
     }
   }
 
-  .logo {
+  .paradeiser_logo {
     max-width: 40px;
     width: 100%;
   }

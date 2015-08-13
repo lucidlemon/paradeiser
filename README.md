@@ -32,6 +32,11 @@ Cons: You can't use the overflow button.
 * jQuery > 1.7
 
 
+## Install via bower
+
+`bower install Paradeiser --save`
+
+
 
 ## Usage
 
