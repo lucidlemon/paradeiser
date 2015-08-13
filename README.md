@@ -17,6 +17,12 @@ So that's where _Paradeiser_ comes in. You get your most important links and eve
 And it only weighs 1.5kb gzipped (1kb if you go for the css-only method).
 
 
+## Features
+
+Based upon webkit, so all the links take the space they need and center themselves, therefore your may use 1, 2 or even 5 links within the navbar.
+
+You may also adjust the sizes etc by overwriting the variables of the scss file.
+
 
 ## Requirements
 
@@ -92,6 +98,7 @@ And then place this stuff right below your `<body>` opening tag:
         </div>
         <span>Contact</span>
     </a>
+    <!-- and include the dropdown aswell - you need js for this -->
     <span class="paradeiser_dropdown">
         <div class="paradeiser_icon_canvas">
             <img src="img/menu_overflow.svg" alt="">
@@ -112,3 +119,8 @@ And then place this stuff right below your `<body>` opening tag:
 * Javascript options instead of pure css
 * Desktop alternative for a full featured set
 * Support for one-page websites with automatic highlighting of the correct link
+
+
+## Why the heck is this called Paradeiser?
+
+Paradeiser is Austrian-German for tomatoe, I just thought it might sound cool, and it has a nice ring to it (Paradise - eh?).
