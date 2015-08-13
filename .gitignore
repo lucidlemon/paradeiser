@@ -1,5 +1,4 @@
 node_modules
 .sass-cache
 .idea
-dist
 demo
