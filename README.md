@@ -92,12 +92,12 @@ And then place this stuff right below your `<body>` opening tag:
         </div>
         <span>Contact</span>
     </a>
-    <span class="dropdown">
+    <span class="paradeiser_dropdown">
         <div class="paradeiser_icon_canvas">
             <img src="img/menu_overflow.svg" alt="">
         </div>
         <span>More</span>
-        <ul class="children">
+        <ul class="paradeiser_children">
             <li><a href="#">Terms of Service</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Yolo</a></li>

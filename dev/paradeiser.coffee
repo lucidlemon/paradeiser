@@ -1,16 +1,15 @@
 paradeiser_open = false
 
-$ '.dropdown'
-.not '.children'
+$ '.paradeiser_dropdown :not(.children)'
 .on 'click touch', (event) ->
+  console.log 'preventing link'
   event.preventDefault()
   paradeiser_link = $ this
   greybox = $ '#paradeiser-greybox'
   if greybox.is '.visible'
     paradeiser_open = false
 
-    paradeiser_link
-    .find '.children'
+    $ '.paradeiser_dropdown .paradeiser_children'
     .removeClass 'visible'
 
     greybox
@@ -18,8 +17,7 @@ $ '.dropdown'
   else
     paradeiser_open = true
 
-    paradeiser_link
-    .find '.children'
+    $ '.paradeiser_dropdown .paradeiser_children'
     .addClass 'visible'
 
     greybox
@@ -29,8 +27,10 @@ $ '<div id="paradeiser-greybox"></div>'
 .insertAfter '.paradeiser'
 .on 'click touch', (event) ->
   if paradeiser_open == true
+    paradeiser_open = false
+
     $ '#paradeiser-greybox'
     .removeClass 'visible'
 
-    $ '.children'
+    $ '.paradeiser_children'
     .removeClass 'visible'
