@@ -35,6 +35,17 @@ Cons: You can't use the overflow button.
 
 ## Usage
 
+### Required Files
+
+```
+paradeiser/
+└── dist/
+    └── min/ 
+	    ├── paradeiser.min.css
+	    └── paradeiser.min.js
+```
+
+
 ### HTML Markup
 
 Within your head or wherever yout might find it suits you, include the source files

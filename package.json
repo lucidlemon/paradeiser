@@ -1,6 +1,6 @@
 {
   "name": "paradeiser",
-  "version": "1.0.6",
+  "version": "0.0.2",
   "description": "Event binding helper",
   "main": "dist/paradeiser.min.js",
   "private": true,
@@ -9,6 +9,7 @@
     "csswring": "^3.0.5",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.3",
+    "grunt-bump": "^0.3.1",
     "grunt-concat-css": "^0.3.1",
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-concat": "^0.5.1",
