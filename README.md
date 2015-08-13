@@ -76,25 +76,25 @@ And then place this stuff right below your `<body>` opening tag:
     </a>
     <a href="#">
         <div class="paradeiser_icon_canvas">
-            <img src="img/menu_home.svg" alt="Navigate to Home" class="icon">
+            <img src="img/menu_home.svg" alt="Navigate to Home">
         </div>
         <span>Home</span>
     </a>
     <a href="#">
         <div class="paradeiser_icon_canvas">
-            <img src="img/menu_shop.svg" alt="Navigate to Shop" class="icon">
+            <img src="img/menu_shop.svg" alt="Navigate to Shop">
         </div>
         <span>Shop</span>
     </a>
     <a href="#">
         <div class="paradeiser_icon_canvas">
-            <img src="img/menu_cart.svg" alt="Navigate to Cart" class="icon">
+            <img src="img/menu_cart.svg" alt="Navigate to Cart">
         </div>
         <span>Cart</span>
     </a>
     <a href="#">
         <div class="paradeiser_icon_canvas">
-            <img src="img/menu_contact.svg" alt="Navigate to Contact" class="icon">
+            <img src="img/menu_contact.svg" alt="Navigate to Contact">
         </div>
         <span>Contact</span>
     </a>
