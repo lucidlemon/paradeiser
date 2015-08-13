@@ -7,6 +7,7 @@ $ '.dropdown'
   paradeiser_link = $ this
   if paradeiser_link.is '.visible'
     paradeiser_open = false
+
     paradeiser_link
     .find '.children'
     .removeClass 'visible'
@@ -15,6 +16,7 @@ $ '.dropdown'
     .remove()
   else
     paradeiser_open = true
+
     paradeiser_link
     .find '.children'
     .addClass 'visible'

@@ -8,6 +8,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-coffee');
+    grunt.loadNpmTasks('grunt-csscomb');
 
     grunt.initConfig({
         sass: {
@@ -49,6 +50,16 @@ module.exports = function(grunt) {
             dist: {
                 src: ['dist/paradeiser.css'],
                 dest: 'dist/min/paradeiser.min.css'
+            }
+        },
+        csscomb: {
+            options: {
+                // Task-specific options go here.
+            },
+            your_target: {
+                files: {
+                    'dev/paradeiser.scss': ['dev/paradeiser.scss'],
+                }
             }
         },
         watch: {
