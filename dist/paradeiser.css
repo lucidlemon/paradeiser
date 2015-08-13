@@ -1,8 +1,8 @@
 .paradeiser {
   position: fixed;
-  z-index: 999;
   top: 0;
   left: 0;
+  z-index: 999;
   display: none;
   width: 100%;
   height: 50px;
@@ -16,20 +16,20 @@
   }
 }
 .paradeiser a, .paradeiser > span {
-  font-family: "Roboto", sans-serif;
-  font-size: 10px;
   position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
+  color: #9b9b9b;
   text-align: center;
   text-decoration: none;
-  color: #9b9b9b;
+  font-weight: 400;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
   align-items: center;
-  justify-content: center;
   flex-grow: 5;
-  font-weight: 300;
+  justify-content: center;
 }
 .paradeiser a.active, .paradeiser a:hover, .paradeiser > span.active, .paradeiser > span:hover {
   background: #d2ebff;
@@ -37,44 +37,44 @@
 .paradeiser .paradeiser_icon_canvas {
   display: block;
   display: flex;
+  margin: 0 auto;
   width: 100%;
   height: 20px;
-  margin: 0 auto;
   align-items: center;
   justify-content: center;
 }
 .paradeiser .paradeiser_icon_canvas img {
   display: block;
-  width: 100%;
-  max-width: 20px;
-  height: auto;
   margin: 0 auto;
+  max-width: 20px;
+  width: 100%;
+  height: auto;
 }
 .paradeiser span {
   margin-top: 3px;
 }
 .paradeiser .logo {
-  width: 100%;
   max-width: 40px;
+  width: 100%;
 }
 .paradeiser ul {
   position: fixed;
   top: 50px;
   left: 0;
-  width: 100%;
-  height: auto;
+  visibility: hidden;
   margin: 0;
   padding: 0;
-  text-align: center;
+  width: 100%;
+  height: auto;
   background: #4a4a4a;
-  visibility: hidden;
+  text-align: center;
   opacity: 0;
   transition: visbility, opacity 0.4s;
 }
 .paradeiser ul.visible {
-  transition: visbility, opacity 0.4s;
   visibility: visible;
   opacity: 1;
+  transition: visbility, opacity 0.4s;
 }
 .paradeiser ul li {
   display: inline-block;
@@ -82,29 +82,29 @@
   text-align: center;
 }
 .paradeiser ul li a {
-  font-size: 15px;
   display: inline-block;
-  width: 100%;
   padding: 15px 0;
+  width: 100%;
   color: #fff;
+  font-size: 15px;
 }
 
 #paradeiser-greybox {
   position: fixed;
   top: 0;
   left: 0;
+  visibility: hidden;
   width: 100%;
   height: 120%;
   background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px) saturate(100%);
-  visibility: hidden;
-  pointer-events: none;
   opacity: 0;
   transition: visbility, opacity 0.2s;
+  pointer-events: none;
+  backdrop-filter: blur(10px) saturate(100%);
 }
 #paradeiser-greybox.visible {
+  visibility: visible;
   opacity: 1;
   transition: visbility, opacity 0.2s;
-  visibility: visible;
   pointer-events: auto;
 }
