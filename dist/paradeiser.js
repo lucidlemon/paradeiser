@@ -3,7 +3,7 @@
 
   paradeiser_open = false;
 
-  $('.paradeiser_dropdown :not(.children)').on('click', function(event) {
+  $('.paradeiser_dropdown :not(.paradeiser_children)').on('click', function(event) {
     console.log('preventing link');
     event.preventDefault();
     return $('.paradeiser_dropdown .paradeiser_children, #paradeiser-greybox').toggleClass('visible');

@@ -1,6 +1,6 @@
 paradeiser_open = false
 
-$ '.paradeiser_dropdown :not(.children)'
+$ '.paradeiser_dropdown :not(.paradeiser_children)'
 .on 'click', (event) ->
   console.log 'preventing link'
   event.preventDefault()
