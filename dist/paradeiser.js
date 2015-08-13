@@ -4,8 +4,13 @@
   paradeiser_open = false;
 
   $('.paradeiser_dropdown :not(.paradeiser_children)').on('click', function(event) {
-    console.log('preventing link');
-    event.preventDefault();
+    var paradeiser_dropdown;
+    paradeiser_dropdown = $(this);
+    if (paradeiser_dropdown.parents('.paradeiser_children').length) {
+
+    } else {
+      event.preventDefault();
+    }
     return $('.paradeiser_dropdown .paradeiser_children, #paradeiser-greybox').toggleClass('visible');
   });
 
