@@ -72,7 +72,7 @@ And then place this stuff right below your `<body>` opening tag:
 ```html
 <div class="paradeiser">
     <a href="#">
-        <img src="http://danielwinter.at/apple-touch-icon_76x76.png" alt="Logo of Daniel Winter" class="logo">
+        <img src="http://danielwinter.at/apple-touch-icon_76x76.png" alt="Logo of Daniel Winter" class="paradeiser_logo">
     </a>
     <a href="#">
         <div class="paradeiser_icon_canvas">
