@@ -123,4 +123,4 @@ And then place this stuff right below your `<body>` opening tag:
 
 ## Why the heck is this called Paradeiser?
 
-Paradeiser is Austrian-German for tomatoe, I just thought it might sound cool, and it has a nice ring to it (Paradise - eh?).
+Paradeiser is Austrian-German for tomato, I just thought it might sound cool, and it has a nice ring to it (Paradise - eh?).
