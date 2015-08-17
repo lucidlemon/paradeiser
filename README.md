@@ -68,6 +68,14 @@ Within your head or wherever yout might find it suits you, include the source fi
 
 And then place this stuff right below your `<body>` opening tag:
 
+For further demonstration, visit the [Demo pages!](demo/)
+
+[Simple, pure CSS!](demo/demo1.html)
+
+[With basic overflow!](demo/demo2.html)
+
+[With overflow and text as Icon as well as hiding links based on device size!](demo/demo3.html)
+
 
 ```html
 <nav class="paradeiser">
@@ -113,12 +121,6 @@ And then place this stuff right below your `<body>` opening tag:
 </nav>
 ```
 
-For further demonstration, visit the [Demo pages!](demo/)
-
-[Simple, pure CSS!](demo/demo1.html)
-[With basic overflow!](demo/demo2.html)
-[With overflow and text as Icon as well as hiding links based on device size!](demo/demo3.html)
-
 
 ## Plans for the Future
 
@@ -136,3 +138,6 @@ Paradeiser is Austrian-German for tomato, I just thought it might sound cool, an
 
 ### v 0.1.0
 Paradeiser is now visible on Desktop systems aswell, if you want to supress this behaviour, just set the `$paradeiser-mobile-only` variable to true while importing the paradeiser_variables.
+
+### v 0.1.2
+Added paradeiser-hidden-* classes for hiding links on different devices. This way you can move links from the navbar to the overflow menu when switching to mobile
