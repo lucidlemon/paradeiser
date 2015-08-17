@@ -3,12 +3,10 @@
 
   paradeiser_open = false;
 
-  $('.paradeiser_dropdown :not(.paradeiser_children)').on('click', function(event) {
-    var paradeiser_dropdown;
-    paradeiser_dropdown = $(this);
-    if (paradeiser_dropdown.parents('.paradeiser_children').length) {
-
-    } else {
+  $('.paradeiser_dropdown').on('click', function(event) {
+    var target;
+    target = $(event.target);
+    if (!target.parents('.paradeiser_children').length) {
       event.preventDefault();
     }
     return $('.paradeiser_dropdown .paradeiser_children, #paradeiser-greybox').toggleClass('visible');

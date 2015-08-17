@@ -1,13 +1,14 @@
 paradeiser_open = false
 
-$ '.paradeiser_dropdown :not(.paradeiser_children)'
+$ '.paradeiser_dropdown'
 .on 'click', (event) ->
-  paradeiser_dropdown = $ this
-  if paradeiser_dropdown .parents('.paradeiser_children') .length
-#    console.log 'child'
-  else
+  target = $ event.target
+  if !target .parents('.paradeiser_children') .length
 #    console.log 'parent'
     event.preventDefault()
+#  else
+#    console.log 'child'
+
 
   $ '.paradeiser_dropdown .paradeiser_children, #paradeiser-greybox'
   .toggleClass 'visible'

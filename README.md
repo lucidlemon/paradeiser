@@ -124,3 +124,8 @@ And then place this stuff right below your `<body>` opening tag:
 ## Why the heck is this called Paradeiser?
 
 Paradeiser is Austrian-German for tomato, I just thought it might sound cool, and it has a nice ring to it (Paradise - eh?).
+
+## Changelog
+
+### v 0.1.0
+Paradeiser is now visible on Desktop systems aswell, if you want to supress this behaviour, just set the `$paradeiser-mobile-only` variable to false while importing the paradeiser_variables.
