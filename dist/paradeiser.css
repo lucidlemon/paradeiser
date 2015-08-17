@@ -1,3 +1,12 @@
+body {
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  body {
+    margin-top: 50px;
+  }
+}
+
 .paradeiser {
   position: fixed;
   top: 0;
@@ -39,7 +48,7 @@
   }
 }
 .paradeiser a.active, .paradeiser a:hover, .paradeiser > span.active, .paradeiser > span:hover {
-  background: #d2ebff;
+  background: #eaf6fa;
 }
 .paradeiser .paradeiser_icon_canvas {
   display: block;

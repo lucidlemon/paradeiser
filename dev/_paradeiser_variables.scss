@@ -1,6 +1,9 @@
 $paradeiser-background: #fcfcfc;
 $paradeiser-link-color: #9b9b9b;
-$paradeiser-link-color-active: #d2ebff;
+
+$primary: #97d3e7 !default;
+$paradeiser-link-color-active: mix($primary, #fff, 20%);
+
 $paradeiser-link-font-size: 10px;
 $paradeiser-link-font-size-desktop: 13px;
 $paradeiser-dropdown-background: #4a4a4a;

@@ -1,3 +1,16 @@
+body{
+  @if($paradeiser-mobile-only){
+    @media (max-width: $paradeiser-visible-until) {
+      margin-top: $paradeiser-height;
+    }
+  } @else {
+    margin-top: $paradeiser-height-desktop;
+    @media (max-width: $paradeiser-visible-until) {
+      margin-top: $paradeiser-height;
+    }
+  }
+}
+
 .paradeiser {
   position: fixed;
   top: 0;
