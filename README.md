@@ -68,13 +68,11 @@ Within your head or wherever yout might find it suits you, include the source fi
 
 And then place this stuff right below your `<body>` opening tag:
 
-For further demonstration, visit the [Demo pages!](demo/)
+For further demonstration, visit the [Demo pages](demo/)
 
-[Simple, pure CSS!](demo/demo1.html)
-
-[With basic overflow!](demo/demo2.html)
-
-[With overflow and text as Icon as well as hiding links based on device size!](demo/demo3.html)
+* [Simple, pure CSS](demo/demo1.html)
+* [With basic overflow](demo/demo2.html)
+* [With overflow and text as Icon as well as hiding links based on device size!](demo/demo3.html)
 
 
 ```html
