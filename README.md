@@ -113,6 +113,13 @@ And then place this stuff right below your `<body>` opening tag:
 </nav>
 ```
 
+For further demonstration, visit the [Demo pages!](demo/)
+
+[Simple, pure CSS!](demo/demo1.html)
+[With basic overflow!](demo/demo2.html)
+[With overflow and text as Icon as well as hiding links based on device size!](demo/demo3.html)
+
+
 ## Plans for the Future
 
 * Better animations on the popout
