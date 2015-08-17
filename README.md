@@ -70,7 +70,7 @@ And then place this stuff right below your `<body>` opening tag:
 
 
 ```html
-<div class="paradeiser">
+<nav class="paradeiser">
     <a href="#">
         <img src="http://danielwinter.at/apple-touch-icon_76x76.png" alt="Logo of Daniel Winter" class="paradeiser_logo">
     </a>
@@ -110,7 +110,7 @@ And then place this stuff right below your `<body>` opening tag:
             <li><a href="#">Yolo</a></li>
         </ul>
     </span>
-</div>
+</nav>
 ```
 
 ## Plans for the Future
