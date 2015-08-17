@@ -3,17 +3,25 @@
   top: 0;
   left: 0;
   z-index: 999;
-  display: none;
   width: 100%;
   height: $paradeiser-height;
   background: $paradeiser-background;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.02), 0 2px 10px 0 rgba(0,0,0,0.10);
 
-  backdrop-filter: blur(10px) saturate(100%);
-
-  @media (max-width: $paradeiser-visible-until) {
+  @if($paradeiser-mobile-only){
+    display: none;
+    @media (max-width: $paradeiser-visible-until) {
+      display: flex;
+    }
+  } @else {
     display: flex;
   }
+
+  @media (min-width: $paradeiser-visible-until) {
+    height: $paradeiser-height-desktop;
+  }
+
+  backdrop-filter: blur(10px) saturate(100%);
 
   a, > span {
     position: relative;
@@ -28,6 +36,11 @@
     font-size: $paradeiser-link-font-size;
     font-family: $paradeiser-font-family;
     cursor: pointer;
+    z-index: 5;
+
+    @media (min-width: $paradeiser-visible-until) {
+      font-size: $paradeiser-link-font-size-desktop;
+    }
 
     align-items: center;
     flex-grow: 5;
@@ -59,6 +72,11 @@
   span {
     margin-top: 5px;
     font-size: $paradeiser-link-font-size;
+
+    @media (min-width: $paradeiser-visible-until) {
+      font-size: $paradeiser-link-font-size-desktop;
+    }
+
     &.paradeiser_dropdown {
       margin-top: 0;
     }
@@ -72,6 +90,11 @@
   ul {
     position: fixed;
     top: $paradeiser-height;
+
+    @media (min-width: $paradeiser-visible-until) {
+      top: $paradeiser-height-desktop;
+    }
+
     left: 0;
     z-index: 998;
     visibility: hidden;

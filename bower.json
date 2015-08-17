@@ -1,0 +1,20 @@
+{
+  "name": "paradeiser-github-page",
+  "version": "0.1.0",
+  "authors": [
+    "Daniel Winter <d.kreide@gmail.com>"
+  ],
+  "description": "The github Page for paradeiser",
+  "license": "MIT",
+  "homepage": "http://lucidlemon.github.io/paradeiser",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Paradeiser": "*"
+  }
+}
