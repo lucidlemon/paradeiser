@@ -70,6 +70,8 @@ body{
     margin: 0 auto;
     width: 100%;
     height: 20px;
+    text-align: center;
+    color: #000;
 
     align-items: center;
     justify-content: center;
@@ -163,5 +165,23 @@ body{
     opacity: 1;
     transition: opacity 0.2s;
     pointer-events: auto;
+  }
+}
+
+.paradeiser-hidden-phone{
+  @media (max-width: $paradeiser-break-small) {
+    display: none !important;
+  }
+}
+
+.paradeiser-hidden-tablet{
+  @media (min-width: $paradeiser-break-small + 1) and (max-width: $paradeiser-break-medium) {
+    display: none !important;
+  }
+}
+
+.paradeiser-hidden-desktop{
+  @media (min-width: $paradeiser-break-medium + 1) {
+    display: none !important;
   }
 }

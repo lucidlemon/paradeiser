@@ -31,7 +31,7 @@
         <a href="#">
             <img src="http://danielwinter.at/apple-touch-icon_76x76.png" alt="Logo of Daniel Winter" class="paradeiser_logo">
         </a>
-        <a href="#">
+        <a href="#" class="paradeiser-hidden-phone">
             <div class="paradeiser_icon_canvas">
                 <img src="img/menu_home.svg" alt="Navigate to Home">
             </div>
@@ -45,15 +45,27 @@
         </a>
         <a href="#">
             <div class="paradeiser_icon_canvas">
-                <img src="img/menu_cart.svg" alt="Navigate to Cart">
+                <b>5.99 €</b>
             </div>
             <span>Cart</span>
         </a>
-        <a href="#">
+        <a href="#" class="paradeiser-hidden-phone paradeiser-hidden-tablet">
             <div class="paradeiser_icon_canvas">
                 <img src="img/menu_contact.svg" alt="Navigate to Contact">
             </div>
-            <span>Contact</span>
+            <span>Desktop Only</span>
+        </a>
+        <a href="#" class="paradeiser-hidden-desktop paradeiser-hidden-tablet">
+            <div class="paradeiser_icon_canvas">
+                <img src="img/menu_contact.svg" alt="Navigate to Contact">
+            </div>
+            <span>Mobile Only</span>
+        </a>
+        <a href="#" class="paradeiser-hidden-phone paradeiser-hidden-desktop">
+            <div class="paradeiser_icon_canvas">
+                <img src="img/menu_contact.svg" alt="Navigate to Contact">
+            </div>
+            <span>Tablet Only</span>
         </a>
         <span class="paradeiser_dropdown">
             <div class="paradeiser_icon_canvas">
@@ -64,6 +76,9 @@
                 <li><a href="#">Terms of Service</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Yolo</a></li>
+                <li class="paradeiser-hidden-desktop"><a href="#">Hidden on desktop</a></li>
+                <li class="paradeiser-hidden-tablet"><a href="#">Hidden on tablet</a></li>
+                <li class="paradeiser-hidden-phone"><a href="#">Hidden on phone</a></li>
             </ul>
         </span>
     </nav>
