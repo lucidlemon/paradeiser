@@ -24,7 +24,7 @@ body {
     height: 60px;
   }
 }
-.paradeiser a, .paradeiser > span {
+.paradeiser a, .paradeiser .paradeiser_dropdown {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -43,11 +43,11 @@ body {
   justify-content: center;
 }
 @media (min-width: 768px) {
-  .paradeiser a, .paradeiser > span {
+  .paradeiser a, .paradeiser .paradeiser_dropdown {
     font-size: 13px;
   }
 }
-.paradeiser a.active, .paradeiser a:hover, .paradeiser > span.active, .paradeiser > span:hover {
+.paradeiser a.active, .paradeiser a:hover, .paradeiser .paradeiser_dropdown.active, .paradeiser .paradeiser_dropdown:hover {
   background: #eaf6fa;
 }
 .paradeiser .paradeiser_icon_canvas {
