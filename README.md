@@ -14,7 +14,7 @@ So that's where _Paradeiser_ comes in. You get your most important links and eve
 
 ![Demo of Paradeiser](https://raw.github.com/lucidlemon/paradeiser/master/demo/mockup_03.png)
 
-And it only weighs 1.5kb gzipped (1kb if you go for the css-only method).
+And it only weighs 1.3kb gzipped.
 
 
 ## Features
@@ -31,18 +31,11 @@ You may also adjust the sizes etc by overwriting the variables of the scss file.
 * CSS.
 * Really. That's it.
 
-Cons: You can't use the overflow button.
-
-### JS Version
-
-* jQuery > 1.7
-
+Thanks to [andreruffert](https://github.com/andreruffert) Paradeiser is now CSS only.
 
 ## Install via bower
 
 `bower install Paradeiser --save`
-
-
 
 ## Usage
 
@@ -52,18 +45,16 @@ Cons: You can't use the overflow button.
 paradeiser/
 └── dist/
     └── min/ 
-	    ├── paradeiser.min.css
-	    └── paradeiser.min.js
+	    └── paradeiser.min.css
 ```
 
 
 ### HTML Markup
 
-Within your head or wherever yout might find it suits you, include the source files
+Within your head or wherever you might find it suits you, include the source file
 
 ```html
 <link rel="stylesheet" href="path-to/paradeiser.min.css">
-<script src="path-to/paradeiser.min.js"></script>
 ```
 
 And then place this stuff right below your `<body>` opening tag:
@@ -104,16 +95,22 @@ For further demonstration, visit the [Demo pages](demo/)
         </div>
         <span>Contact</span>
     </a>
-    <!-- and include the dropdown aswell - you need js for this -->
+    <!-- and include the dropdown aswell -->
     <span class="paradeiser_dropdown">
-        <div class="paradeiser_icon_canvas">
-            <img src="img/menu_overflow.svg" alt="">
-        </div>
-        <span>More</span>
-        <ul class="paradeiser_children">
+        <a href="#paradeiser-more">
+            <div class="paradeiser_icon_canvas">
+                <img src="img/menu_overflow.svg" alt="">
+            </div>
+            <span>More</span>
+        </a>
+        <ul class="paradeiser_children" id="paradeiser-more">
             <li><a href="#">Terms of Service</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Yolo</a></li>
+            <li class="paradeiser-hidden-desktop"><a href="#">Hidden on desktop</a></li>
+            <li class="paradeiser-hidden-tablet"><a href="#">Hidden on tablet</a></li>
+            <li class="paradeiser-hidden-phone"><a href="#">Hidden on phone</a></li>
+            <li><a href="#!"></a></li>
         </ul>
     </span>
 </nav>
@@ -123,14 +120,12 @@ For further demonstration, visit the [Demo pages](demo/)
 ## Plans for the Future
 
 * Better animations on the popout
-* Javascript options instead of pure css
-* Desktop alternative for a full featured set
 * Support for one-page websites with automatic highlighting of the correct link
 
 
 ## Why the heck is this called Paradeiser?
 
-Paradeiser is Austrian-German for tomato, I just thought it might sound cool, and it has a nice ring to it (Paradise - eh?).
+Paradeiser is Austrian for tomato, I just thought it might sound cool, and it has a nice ring to it (Paradise - eh?).
 
 ## Changelog
 
@@ -139,3 +134,7 @@ Paradeiser is now visible on Desktop systems aswell, if you want to supress this
 
 ### v 0.1.2
 Added paradeiser-hidden-* classes for hiding links on different devices. This way you can move links from the navbar to the overflow menu when switching to mobile
+
+### v 0.2.0
+Paradeiser is now CSS only, thanks to [andreruffert](https://github.com/andreruffert) and the CSS `:target` selector.
+Mind the reworked HTML Markup.
