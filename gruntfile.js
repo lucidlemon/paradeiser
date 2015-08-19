@@ -7,7 +7,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-postcss');
-    grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-csscomb');
     grunt.loadNpmTasks('grunt-bump');
 
@@ -20,24 +19,6 @@ module.exports = function(grunt) {
                 },
                 files: {
                     "dist/paradeiser.css": "dev/paradeiser.scss" // destination file and source file
-                }
-            }
-        },
-        coffee: {
-            compile: {
-                files: {
-                    'dist/paradeiser.js': 'dev/paradeiser.coffee' // 1:1 compile
-                }
-            }
-        },
-        uglify: {
-            options: {
-                sourceMap: true,
-                sourceMapName: 'dist/min/paradeiser.min.js.map'
-            },
-            my_target: {
-                files: {
-                    'dist/min/paradeiser.min.js': ['dist/paradeiser.js']
                 }
             }
         },
@@ -93,5 +74,5 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('default', ['sass', 'coffee', 'uglify', 'postcss']);
+    grunt.registerTask('default', ['sass', 'postcss']);
 };
