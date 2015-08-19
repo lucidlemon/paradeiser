@@ -1,14 +1,5 @@
 module.exports = function(grunt) {
     require('jit-grunt')(grunt);
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-concat-css');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-postcss');
-    grunt.loadNpmTasks('grunt-csscomb');
-    grunt.loadNpmTasks('grunt-bump');
 
     grunt.initConfig({
         sass: {
@@ -46,8 +37,8 @@ module.exports = function(grunt) {
         },
         watch: {
             styles: {
-                files: ['dev/*.scss', 'dev/*.coffee'], // which files to watch
-                tasks: ['sass', 'postcss', 'coffee'],
+                files: ['dev/*.scss'], // which files to watch
+                tasks: ['sass', 'postcss'],
                 options: {
                     nospawn: true,
                     livereload: true
