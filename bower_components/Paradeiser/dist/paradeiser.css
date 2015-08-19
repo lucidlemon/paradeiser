@@ -24,7 +24,7 @@ body {
     height: 60px;
   }
 }
-.paradeiser a, .paradeiser > span {
+.paradeiser a, .paradeiser .paradeiser_dropdown {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -43,11 +43,11 @@ body {
   justify-content: center;
 }
 @media (min-width: 768px) {
-  .paradeiser a, .paradeiser > span {
+  .paradeiser a, .paradeiser .paradeiser_dropdown {
     font-size: 13px;
   }
 }
-.paradeiser a.active, .paradeiser a:hover, .paradeiser > span.active, .paradeiser > span:hover {
+.paradeiser a.active, .paradeiser a:hover, .paradeiser .paradeiser_dropdown.active, .paradeiser .paradeiser_dropdown:hover {
   background: #eaf6fa;
 }
 .paradeiser .paradeiser_icon_canvas {
@@ -80,6 +80,9 @@ body {
 .paradeiser span.paradeiser_dropdown {
   margin-top: 0;
 }
+.paradeiser span.paradeiser_dropdown > a {
+  width: 100%;
+}
 .paradeiser .paradeiser_logo {
   max-width: 40px;
   width: 100%;
@@ -87,6 +90,8 @@ body {
 .paradeiser ul {
   position: fixed;
   top: 50px;
+  bottom: 0;
+  pointer-events: none;
   left: 0;
   z-index: 998;
   visibility: hidden;
@@ -94,7 +99,6 @@ body {
   padding: 0;
   width: 100%;
   height: auto;
-  background: #4a4a4a;
   text-align: center;
   opacity: 0;
   transition: opacity 0.4s;
@@ -104,12 +108,14 @@ body {
     top: 60px;
   }
 }
-.paradeiser ul.visible {
+.paradeiser ul:target {
   visibility: visible;
   opacity: 1;
   transition: opacity 0.4s;
+  pointer-events: auto;
 }
 .paradeiser ul li {
+  background: #4a4a4a;
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -124,26 +130,15 @@ body {
 .paradeiser ul li a:hover, .paradeiser ul li span:hover {
   background: #575757;
 }
-
-#paradeiser-greybox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-  width: 100%;
-  height: 120%;
-  background: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  transition: opacity 0.2s;
-  pointer-events: none;
-  z-index: 500;
-  backdrop-filter: blur(10px) saturate(100%);
+.paradeiser ul li:last-child {
+  background: transparent;
+  height: 100%;
 }
-#paradeiser-greybox.visible {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 0.2s;
-  pointer-events: auto;
+.paradeiser ul li:last-child a {
+  display: block;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px) saturate(100%);
 }
 
 @media (max-width: 760px) {

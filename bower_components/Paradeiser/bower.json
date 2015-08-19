@@ -1,12 +1,11 @@
 {
   "name": "paradeiser",
   "location": "lucidlemon/paradeiser",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Paradeiser is an easy to use menu for mobile views",
   "homepage": "http://www.danielwinter.at/paradeiser",
   "main": [
-    "dist/min/paradeiser.min.css",
-    "dist/min/paradeiser.min.js"
+    "dist/min/paradeiser.min.css"
   ],
   "ignore": [
     "*",
@@ -14,10 +13,5 @@
     "!dist/**/*",
     "!dev",
     "!dev/**/*"
-  ],
-  "dependencies": {
-    "jquery": ">=1.7.0"
-  },
-  "devDependencies": {
-  }
+  ]
 }
