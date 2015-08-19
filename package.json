@@ -1,6 +1,6 @@
 {
   "name": "paradeiser",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Paradeiser is an easy to use menu for mobile views",
   "main": "dist/paradeiser.min.css",
   "private": true,
