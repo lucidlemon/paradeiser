@@ -212,15 +212,22 @@
 
     &lt;!-- paste in as many links as you want -->
 
-    &lt;!-- and include the dropdown aswell - you need js for this -->
+    <!-- and include the dropdown aswell -->
     &lt;span class="paradeiser_dropdown">
-        &lt;div class="paradeiser_icon_canvas">
-            &lt;img src="img/menu_overflow.svg" alt="">
-        &lt;/div>
-        &lt;span>More&lt;/span>
-        &lt;ul class="paradeiser_children">
+        &lt;a href="#paradeiser-more">
+            &lt;div class="paradeiser_icon_canvas">
+                &lt;img src="img/menu_overflow.svg" alt="">
+            &lt;/div>
+            &lt;span>More&lt;/span>
+        &lt;/a>
+        &lt;ul class="paradeiser_children" id="paradeiser-more">
             &lt;li>&lt;a href="#">Terms of Service&lt;/a>&lt;/li>
             &lt;li>&lt;a href="#">About Us&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#">Yolo&lt;/a>&lt;/li>
+            &lt;li class="paradeiser-hidden-desktop">&lt;a href="#">Hidden on desktop&lt;/a>&lt;/li>
+            &lt;li class="paradeiser-hidden-tablet">&lt;a href="#">Hidden on tablet&lt;/a>&lt;/li>
+            &lt;li class="paradeiser-hidden-phone">&lt;a href="#">Hidden on phone&lt;/a>&lt;/li>
+            &lt;li>&lt;a href="#!">&lt;/a>&lt;/li>
         &lt;/ul>
     &lt;/span>
 &lt;/div>
