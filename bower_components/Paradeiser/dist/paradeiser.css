@@ -1,3 +1,12 @@
+body {
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  body {
+    margin-top: 50px;
+  }
+}
+
 .paradeiser {
   position: fixed;
   top: 0;
@@ -39,7 +48,7 @@
   }
 }
 .paradeiser a.active, .paradeiser a:hover, .paradeiser > span.active, .paradeiser > span:hover {
-  background: #d2ebff;
+  background: #eaf6fa;
 }
 .paradeiser .paradeiser_icon_canvas {
   display: block;
@@ -47,6 +56,8 @@
   margin: 0 auto;
   width: 100%;
   height: 20px;
+  text-align: center;
+  color: #000;
   align-items: center;
   justify-content: center;
 }
@@ -133,4 +144,22 @@
   opacity: 1;
   transition: opacity 0.2s;
   pointer-events: auto;
+}
+
+@media (max-width: 760px) {
+  .paradeiser-hidden-phone {
+    display: none !important;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1025px) {
+  .paradeiser-hidden-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1026px) {
+  .paradeiser-hidden-desktop {
+    display: none !important;
+  }
 }

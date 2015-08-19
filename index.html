@@ -51,6 +51,12 @@
             margin: 0;
         }
 
+        ul{
+            text-align: left;
+            color: #fff;
+            line-height: 1.6;
+        }
+
         code{
             font-size: 12px;
             line-height: 1.2em;
@@ -97,7 +103,7 @@
         input, a.button{
             display: inline-block;
             background: #3D3D3D;
-            padding: 5px 20px;
+            padding: 10px 20px;
             border: 0;
             margin: 20px 0;
             font-size: 16px;
@@ -122,7 +128,7 @@
     <link rel="stylesheet" href="bower_components/Paradeiser/dist/min/paradeiser.min.css">
 </head>
 <body>
-<div class="paradeiser">
+<nav class="paradeiser">
     <a href="http://lucidlemon.github.io/paradeiser/">
         <img src="img/logo.svg" alt="Logo of Paradeiser" class="logo">
     </a>
@@ -155,7 +161,7 @@
             <li><a href="https://userbrain.net">Userbrain.net</a></li>
         </ul>
     </span>
-</div>
+</nav>
 
     <div class="center hero">
         <h3>the web became <b>fat</b>.</h3>
@@ -178,7 +184,11 @@
         <h3>demo</h3><br>
         <p>Well.. just look up or visit</p><br>
         <p><a href="https://gaumengut.at" target="_blank">Gaumengut.at</a></p>
-        <p><a href="http://blumenkunst.at" target="_blank">Blumenkunst.at</a></p>
+        <p><a href="http://blumenkunst.at" target="_blank">Blumenkunst.at</a></p><br>
+        <br>
+        <p>Share the love!</p>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Paradeiser | The best #Hamburger menu alternative yet" data-via="dkreide" data-size="large" data-hashtags="paradeiser">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </div>
 
     <div class="center hero">
@@ -193,7 +203,7 @@
     <div class="center hero">
         <h3>embed.</h3>
 <pre><code class="language-markup">
-&lt;div class="paradeiser">
+&lt;nav class="paradeiser">
     &lt;a href="#">
         &lt;img src="logo.png" alt="Logo" class="paradeiser_logo">
     &lt;/a>
@@ -230,9 +240,23 @@
             &lt;li>&lt;a href="#!">&lt;/a>&lt;/li>
         &lt;/ul>
     &lt;/span>
-&lt;/div>
+&lt;/nav>
 </code></pre>
 
+    </div>
+
+    <div class="center hero">
+        <h3>features</h3>
+        <ul>
+            <li>small and easy to use</li>
+            <li>important links instantly visible and clickable (beat this u little piece of meat)</li>
+            <li>subtle design, easily customizable through SCSS</li>
+            <li>Overflow menu for less important links (yes, this is basically a hamburger)</li>
+            <li>compatible with all major frameworks including Bootstrap, Foundation and PureCSS</li>
+            <li>may easily be used as a mobile nav only, keep your standard nav on desktop</li>
+            <li>hide links based on device size (see paradeiser-hidden css classes in demo3.html)</li>
+            <li>Won't kill your favorite GOT characters</li>
+        </ul>
     </div>
 
 
