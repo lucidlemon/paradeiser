@@ -150,17 +150,26 @@
         </div>
         <span>Donate</span>
     </a>
-    <!-- and include the dropdown aswell - you need js for this -->
+
+    <!-- and include the dropdown aswell -->
     <span class="paradeiser_dropdown">
-        <div class="paradeiser_icon_canvas">
-            <img src="img/menu_overflow.svg" alt="">
-        </div>
-        <span>More</span>
-        <ul class="paradeiser_children">
+        <a href="#paradeiser-more">
+            <div class="paradeiser_icon_canvas">
+                <img src="img/menu_overflow.svg" alt="">
+            </div>
+            <span>More</span>
+        </a>
+        <ul class="paradeiser_children" id="paradeiser-more">
             <li><a href="https://varys.io">Varys.io</a></li>
             <li><a href="https://userbrain.net">Userbrain.net</a></li>
+            <li class="paradeiser-hidden-desktop"><a href="#">Hidden on desktop</a></li>
+            <li class="paradeiser-hidden-tablet"><a href="#">Hidden on tablet</a></li>
+            <li class="paradeiser-hidden-phone"><a href="#">Hidden on phone</a></li>
+            <li><a href="#!"></a></li>
         </ul>
     </span>
+
+
 </nav>
 
     <div class="center hero">
