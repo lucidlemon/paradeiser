@@ -1,7 +1,7 @@
 {
   "name": "paradeiser",
   "location": "lucidlemon/paradeiser",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Paradeiser is an easy to use menu for mobile views",
   "homepage": "http://www.danielwinter.at/paradeiser",
   "main": [
