@@ -12,6 +12,11 @@
     "!dist",
     "!dist/**/*",
     "!dev",
-    "!dev/**/*"
+    "!dev/**/*",
+    "!demo/demo1.html",
+    "!demo/demo2.html",
+    "!demo/demo3.html",
+    "!demo/img/menu_overflow.png",
+    "!demo/img/menu_overflow.svg"
   ]
 }
