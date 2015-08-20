@@ -254,7 +254,7 @@
         <h2>The best mobile navigation on this planet.<br>
             1.3kb of pure joy. CSS Only.</h2>
 
-        <a href="paradeiser.zip" class="button" target="_blank">download</a>
+        <a href="paradeiser.zip" class="button" target="_blank" id="download">download</a>
         <a href="https://github.com/lucidlemon/paradeiser" class="button" target="_blank">github</a>
 
         <p><i>or just go with the flow</i><br>
@@ -403,6 +403,11 @@
 
     ga('create', 'UA-17828347-10', 'auto');
     ga('send', 'pageview');
+
+    var downloadLink = document.getElementById('download');
+    addListener(downloadLink, 'click', function() {
+        ga('send', 'event', 'button', 'click', 'download zip');
+    });
 
 </script>
 
