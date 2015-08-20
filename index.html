@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,900' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,900' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" href="prism.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Paradeiser</title>
     <style>
         body, html{
-            background: #FF7300;
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
         }
 
         *{
@@ -17,43 +19,65 @@
             position: relative;
         }
 
-        h1, h3, p, input, a.button, i, b{
+        .orange h1, .orange h3, .orange b, .orange p{
             color: #fff;
+        }
+
+        h1, h3, p, input, a.button, i, b{
+            color: #9B9B9B;
         }
 
         .center{
             width: 100%;
             text-align: center;
+            line-height: 0;
         }
         
         .hero{
             max-width: 640px;
-            margin: 160px auto;
+            margin: 0 auto;
+            padding: 100px 0;
+        }
+        
+        .orange{
+            background: url("img/back.svg") center center, url("img/noise.png") center center;
+            background-size: cover;
         }
 
         h1{
             margin: 10px 0;
             font-weight: 300;
             font-size: 60px;
+            line-height: 1.2;
+        }
+
+        h2{
+            /* The best mobile navi: */
+            font-size: 36px;
+            font-weight: 300;
+            color: #9B9B9B;
+            line-height: 46px;
         }
 
         h3{
             margin: 0;
             font-weight: 300;
             font-size: 30px;
+            line-height: 1.2;
         }
 
         h3 a, p a{
-            color: #fff;
+            color: #9B9B9B;
         }
 
         p{
             margin: 0;
+            line-height: 1.2;
         }
 
         ul{
             text-align: left;
-            color: #fff;
+            color: #9B9B9B;
             line-height: 1.6;
         }
 
@@ -79,39 +103,69 @@
             z-index: 50;
         }
 
-        .wowbox{
-            background: #3D3D3D;
-            max-width: 640px;
-            width: 100%;
-            margin: -5px auto;
-            padding: 30px;
-            z-index: 99;
-            border-radius: 4px;
+        .mockup{
+            line-height: 0;
+            margin: 0;
+            padding: 0;
         }
 
-        .wowbox p{
-            font-size: 24px;
-            /*text-align: left;*/
-            font-weight: 300;
-            margin-bottom: 30px;
-        }
-
-        .wowbox h1{
-            font-size: 40px;
-        }
-
-        input, a.button{
+        a.button{
             display: inline-block;
             background: #3D3D3D;
-            padding: 10px 20px;
+            padding: 25px 20px;
             border: 0;
-            margin: 20px 0;
+            margin: 20px;
             font-size: 16px;
             text-align: center;
             border-radius: 4px;
-            width: 300px;
+            width: 225px;
             text-decoration: none;
+            background: #F5A623;
+            box-shadow: 0px 2px 0px 0px #E78215;
+            color: #fff;
+            transition: background 0.2s;
         }
+        a.button:hover{
+            background: #F59B0A;
+        }
+        
+        .twitter{
+            margin-top: 40px;
+        }
+
+        .text{
+            text-align: left;
+        }
+
+        .text h3{
+            color: #E78215;
+            margin-bottom: 25px;
+        }
+
+        .text p{
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .full-width, .half-width{
+            padding: 20px;
+        }
+
+        .full-width h3, .half-width h3{
+            font-size: 24px;
+        }
+
+        .full-width{
+            width: 100%;
+        }
+
+        .half-width{
+            width: 49%;
+            margin: 0;
+            display: inline-block;
+        }
+
 
         @media (max-width: 500px) {
             h1{
@@ -123,7 +177,13 @@
             .wowbox p{
                 font-size: 16px;
             }
+
+            .half-width{
+                width: 100%;
+            }
         }
+
+
     </style>
     <link rel="stylesheet" href="bower_components/Paradeiser/dist/min/paradeiser.min.css">
 </head>
@@ -172,41 +232,95 @@
 
 </nav>
 
-    <div class="center hero">
-        <h3>the web became <b>fat</b>.</h3>
-        <h1>let's put it on a diet.</h1>
-        <h3>get rid of those <b>burgers</b>.</h3>
-    </div>
+    <div class="orange">
+        <div class="center hero">
+            <h3>the web became <b>fat</b>.</h3>
 
-    <div class="center hero">
-        <p>Meet Paradeiser.</p>
-        <img src="https://raw.github.com/lucidlemon/paradeiser/master/demo/mockup_03.png" width="411" alt="">
-        <div class="wowbox">
-            <p>The <b>best</b> mobile navigation on this planet.<br>
-                1.3kb of <b>pure joy</b>. 0 calories. 0 carbohydrates.</p>
-            <h1>100% VEGAN.</h1>
-            <h1>100% HIPSTER.</h1>
+            <h1>let's put it on a diet.</h1>
+
+            <h3>get rid of those <b>burgers</b>.</h3>
+        </div>
+
+        <div class="center">
+            <p>Meet Paradeiser.</p>
+            <img src="https://raw.github.com/lucidlemon/paradeiser/master/demo/mockup_03.png" width="411" alt="" class="mockup">
         </div>
     </div>
 
     <div class="center hero">
-        <h3>demo</h3><br>
-        <p>Well.. just look up or visit</p><br>
-        <p><a href="https://gaumengut.at" target="_blank">Gaumengut.at</a></p>
-        <p><a href="http://blumenkunst.at" target="_blank">Blumenkunst.at</a></p><br>
+        <h2>The best mobile navigation on this planet.<br>
+            1.3kb of pure joy. CSS Only.</h2>
+
+        <a href="#" class="button" target="_blank">download</a>
+        <a href="#" class="button" target="_blank">github</a>
+
+        <p><i>or just go with the flow</i><br>
+        bower install Paradeiser</p>
+
+        <!--<h3>demo</h3><br>-->
+        <!--<p>Well.. just look up or visit</p><br>-->
+        <!--<p><a href="https://gaumengut.at" target="_blank">Gaumengut.at</a></p>-->
+        <!--<p><a href="http://blumenkunst.at" target="_blank">Blumenkunst.at</a></p><br>-->
         <br>
-        <p>Share the love!</p>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Paradeiser | The best #Hamburger menu alternative yet" data-via="dkreide" data-size="large" data-hashtags="paradeiser">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+        <div class="twitter"><p>Share the love!</p>
+            <a href="https://twitter.com/share" class="twitter-share-button"
+               data-text="Paradeiser | The best #Hamburger menu alternative yet" data-via="dkreide" data-size="large"
+               data-hashtags="paradeiser">Tweet</a>
+            <script>!function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');</script>
+        </div>
     </div>
 
-    <div class="center hero">
-        <h3>install.</h3>
-        <input type="text" readonly value="bower install Paradeiser">
-        <br>
-        <i>or just get the source</i>
-        <br>
-        <a class="button" href="https://github.com/lucidlemon/paradeiser">Github</a>
+    <div class="center hero text">
+        <div class="full-width">
+            <h3>The Hamburgermenu has proven to be bad.</h3>
+
+            <p>Not only is the icon still not widely recognized and therfore a major usability flaw, it also hides all
+                the links on the website for 3 damn lines.</p>
+
+            <p>With Paradeiser you are forced to display 3-5 of your major links directly to the user, making it more
+                appealing to click one of them for further information.</p>
+        </div>
+
+        <div class="half-width">
+            <h3>Small and Easy to use</h3>
+
+            <p>With only 1.3kb gzipped in a single
+                request Paradeiser is one of the
+                easiest to implement navigations.</p>
+        </div>
+
+        <div class="half-width">
+            <h3>CSS only. No JS required.</h3>
+
+            <p>Forget handling with jQuery or Javascript.
+                Paradeiser is CSS only. SCSS is available for customizations as well.</p>
+        </div>
+
+        <div class="half-width">
+            <h3>Overflow Menu</h3>
+
+            <p>Yes, there is still a hamburger-like
+                navigation implemented as well.
+                You might want to put less important
+                links like Terms and Conditions there.
+                But since it resides next to other nav
+                links the recognition is greatly improved.</p>
+        </div>
+
+        <div class="half-width">
+            <h3>Mobile and/or Desktop</h3>
+
+            <p>Paradeiser is designed to be used on Mobile Screens as well as Desktops. To further improve your navigation hiding classes are here to use: Hide certain links on mobile and put them into the overflow and vice versa.</p>
+        </div>
     </div>
 
     <div class="center hero">
@@ -254,20 +368,20 @@
 
     </div>
 
-    <div class="center hero">
-        <h3>features</h3>
-        <ul>
-            <li>small and easy to use</li>
-            <li>important links instantly visible and clickable (beat this u little piece of meat)</li>
-            <li>subtle design, easily customizable through SCSS</li>
-            <li>CSS Only. No JS required.</li>
-            <li>Overflow menu for less important links (yes, this is basically a hamburger)</li>
-            <li>compatible with all major frameworks including Bootstrap, Foundation and PureCSS</li>
-            <li>may easily be used as a mobile nav only, keep your standard nav on desktop</li>
-            <li>hide links based on device size (see paradeiser-hidden css classes in demo3.html)</li>
-            <li>Won't kill your favorite GOT characters</li>
-        </ul>
-    </div>
+    <!--<div class="center hero">-->
+        <!--<h3>features</h3>-->
+        <!--<ul>-->
+            <!--<li>small and easy to use</li>-->
+            <!--<li>important links instantly visible and clickable (beat this u little piece of meat)</li>-->
+            <!--<li>subtle design, easily customizable through SCSS</li>-->
+            <!--<li>CSS Only. No JS required.</li>-->
+            <!--<li>Overflow menu for less important links (yes, this is basically a hamburger)</li>-->
+            <!--<li>compatible with all major frameworks including Bootstrap, Foundation and PureCSS</li>-->
+            <!--<li>may easily be used as a mobile nav only, keep your standard nav on desktop</li>-->
+            <!--<li>hide links based on device size (see paradeiser-hidden css classes in demo3.html)</li>-->
+            <!--<li>Won't kill your favorite GOT characters</li>-->
+        <!--</ul>-->
+    <!--</div>-->
 
 
 <div class="center hero">
@@ -276,9 +390,7 @@
 
 
 
-    <script src="prism.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/Paradeiser/dist/min/paradeiser.min.js"></script>
+<script src="prism.js"></script>
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
