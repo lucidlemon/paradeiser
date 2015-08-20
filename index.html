@@ -161,9 +161,10 @@
         }
 
         .half-width{
-            width: 49%;
-            margin: 0;
+            width: 50%;
+            margin: 20px 0;
             display: inline-block;
+            float: left;
         }
 
         a, ul a, p a{
@@ -192,6 +193,16 @@
             .half-width{
                 width: 100%;
             }
+        }
+
+        .cf:before,
+        .cf:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        .cf:after {
+            clear: both;
         }
 
 
@@ -295,8 +306,8 @@
             <p><b>Examples of Paradeiser in usage:</b></p>
 
             <ul>
-                <li><a href="http://blumenkunst.at">Blumenkunst.at</a></li>
-                <li><a href="https://gaumengut.at">Gaumengut.at</a></li>
+                <li><a target="_blank" href="http://blumenkunst.at">Blumenkunst.at</a></li>
+                <li><a target="_blank" href="https://gaumengut.at">Gaumengut.at</a></li>
             </ul>
         </div>
 
@@ -331,6 +342,8 @@
 
             <p>Paradeiser is designed to be used on Mobile Screens as well as Desktops. To further improve your navigation hiding classes are here to use: Hide certain links on mobile and put them into the overflow and vice versa.</p>
         </div>
+
+        <div class="cf"></div>
     </div>
 
     <div class="center hero">
