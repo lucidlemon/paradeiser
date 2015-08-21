@@ -13,7 +13,7 @@ $paradeiser-dropdown-background: #4a4a4a;
 $paradeiser-visible-until: 768px;
 $paradeiser-height: 50px;
 $paradeiser-height-desktop: 60px;
-$paradeiser-mobile-only: false;
+$paradeiser-mobile-only: false !default;
 
 $paradeiser-font-family: -apple-system, -apple-system-body, 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif;
 $paradeiser-font-weight: 400;
