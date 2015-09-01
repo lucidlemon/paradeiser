@@ -138,7 +138,7 @@ body{
     text-align: center;
     opacity: 0;
     transition: opacity 0.4s;
-    &:target {
+    &:target, &.open {
       visibility: visible;
       opacity: 1;
       transition: opacity 0.4s;

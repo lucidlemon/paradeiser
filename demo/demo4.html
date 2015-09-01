@@ -67,23 +67,23 @@
             </icon>
             <span>Tablet Only</span>
         </a>
-        <!--<span class="paradeiser_dropdown">-->
-            <!--<a href="#paradeiser-more">-->
-                <!--<icon class="paradeiser_icon_canvas">-->
-                    <!--<img src="img/menu_overflow.svg" alt="">-->
-                <!--</icon>-->
-                <!--<span>More</span>-->
-            <!--</a>-->
-            <!--<ul class="paradeiser_children" id="paradeiser-more">-->
-                <!--<li><a href="#">Terms of Service</a></li>-->
-                <!--<li><a href="#">About Us</a></li>-->
-                <!--<li><a href="#">Yolo</a></li>-->
-                <!--<li class="paradeiser-hidden-desktop"><a href="#">Hidden on desktop</a></li>-->
-                <!--<li class="paradeiser-hidden-tablet"><a href="#">Hidden on tablet</a></li>-->
-                <!--<li class="paradeiser-hidden-phone"><a href="#">Hidden on phone</a></li>-->
-                <!--<li><a href="#!"></a></li>-->
-            <!--</ul>-->
-        <!--</span>-->
+        <span class="paradeiser_dropdown">
+            <a href="#paradeiser-more" id="paradeiser-dropdown">
+                <icon class="paradeiser_icon_canvas">
+                    <img src="img/menu_overflow.svg" alt="">
+                </icon>
+                <span>More</span>
+            </a>
+            <ul class="paradeiser_children" id="paradeiser-more">
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Yolo</a></li>
+                <li class="paradeiser-hidden-desktop"><a href="#">Hidden on desktop</a></li>
+                <li class="paradeiser-hidden-tablet"><a href="#">Hidden on tablet</a></li>
+                <li class="paradeiser-hidden-phone"><a href="#">Hidden on phone</a></li>
+                <li id="greybox"><a href="#!"></a></li>
+            </ul>
+        </span>
     </nav>
     <div class="content">
         <h1>Get rid of those hamburgers.</h1>
@@ -133,9 +133,29 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
     <script>
+
+        // enabling to open the overflow menu as the pure css link
+        // would toggle a scroll and therefore hide the menu
+        document.getElementById("paradeiser-dropdown").addEventListener("click", function(event){
+            // stopping the scroll
+            event.preventDefault();
+            // toggling the class
+            document.getElementById("paradeiser-more").classList.toggle("open");
+        });
+
+        // OPTIONAL: enables closing the overflow by clicking the grey background.
+        // be sure to add the ID "greybox" to the last <li> within the .paradeiser_children
+        document.getElementById("greybox").addEventListener("click", function(event){
+            document.getElementById("paradeiser-more").classList.toggle("open");
+        });
+
+        // enabling headroom
         var myElement = document.querySelector(".paradeiser");
         var headroom  = new Headroom(myElement, {
-            tolerance : 5
+            tolerance : 5,
+            onUnpin : function() {
+                document.getElementById("paradeiser-more").classList.remove("open");
+            }
         });
         headroom.init();
     </script>
