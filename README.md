@@ -129,12 +129,17 @@ Paradeiser is Austrian for tomato, I just thought it might sound cool, and it ha
 
 ## Changelog
 
-### v 0.1.0
-Paradeiser is now visible on Desktop systems aswell, if you want to supress this behaviour, just set the `$paradeiser-mobile-only` variable to true while importing the paradeiser_variables.
-
-### v 0.1.2
-Added paradeiser-hidden-* classes for hiding links on different devices. This way you can move links from the navbar to the overflow menu when switching to mobile
+### v 0.2.5.
+As suggested in #9 hiding on scrolling is now implemented with [Headroom.js](https://github.com/WickyNilliams/headroom.js), but there are still bugs with the overflow menu. If you don't use the overflow though, you can get a [demo here](demo/demo4.html).
+I included headroom.js via the Cloudflare CDN, so no additional download is needed. Paradeiser itself stays JS free.
 
 ### v 0.2.0
 Paradeiser is now CSS only, thanks to [andreruffert](https://github.com/andreruffert) and the CSS `:target` selector.
 Mind the reworked HTML Markup.
+
+### v 0.1.2
+Added paradeiser-hidden-* classes for hiding links on different devices. This way you can move links from the navbar to the overflow menu when switching to mobile
+
+### v 0.1.0
+Paradeiser is now visible on Desktop systems aswell, if you want to supress this behaviour, just set the `$paradeiser-mobile-only` variable to true while importing the paradeiser_variables.
+
