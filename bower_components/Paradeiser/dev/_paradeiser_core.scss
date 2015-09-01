@@ -20,6 +20,18 @@ body{
   height: $paradeiser-height;
   background: $paradeiser-background;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.02), 0 2px 10px 0 rgba(0,0,0,0.10);
+  transition: top 0.4s ease;
+
+  &.headroom--pinned{
+    top: 0;
+  }
+
+  &.headroom--unpinned{
+    top: -$paradeiser-height;
+    @media (min-width: $paradeiser-visible-until) {
+      top: -$paradeiser-height-desktop;
+    }
+  }
 
   @if($paradeiser-mobile-only){
     display: none;
@@ -126,7 +138,7 @@ body{
     text-align: center;
     opacity: 0;
     transition: opacity 0.4s;
-    &:target {
+    &:target, &.open {
       visibility: visible;
       opacity: 1;
       transition: opacity 0.4s;
