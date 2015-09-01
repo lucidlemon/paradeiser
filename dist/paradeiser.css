@@ -16,8 +16,20 @@ body {
   height: 50px;
   background: #fcfcfc;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  transition: top 0.2s ease;
   display: flex;
   backdrop-filter: blur(10px) saturate(100%);
+}
+.paradeiser.headroom--pinned {
+  top: 0;
+}
+.paradeiser.headroom--unpinned {
+  top: -50px;
+}
+@media (min-width: 768px) {
+  .paradeiser.headroom--unpinned {
+    top: -60px;
+  }
 }
 @media (min-width: 768px) {
   .paradeiser {
