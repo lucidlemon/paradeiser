@@ -33,6 +33,10 @@ You may also adjust the sizes etc by overwriting the variables of the scss file.
 
 Thanks to [andreruffert](https://github.com/andreruffert) Paradeiser is now CSS only.
 
+### Automatic Hiding on scroll
+
+There is also basic support for hiding on scroll, which is implemented via [Headroom.js](https://github.com/WickyNilliams/headroom.js), see [demo 4](demo/demo4.html) for details on the implementation.
+
 ## Install via bower
 
 `bower install Paradeiser --save`
