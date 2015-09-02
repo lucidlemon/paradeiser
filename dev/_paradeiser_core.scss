@@ -1,5 +1,5 @@
-body{
-  @if($paradeiser-mobile-only){
+body {
+  @if($paradeiser-mobile-only) {
     @media (max-width: $paradeiser-visible-until) {
       margin-top: $paradeiser-height;
     }
@@ -22,18 +22,20 @@ body{
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.02), 0 2px 10px 0 rgba(0,0,0,0.10);
   transition: top 0.4s ease;
 
-  &.headroom--pinned{
+  backdrop-filter: blur(10px) saturate(100%);
+
+  &.headroom--pinned {
     top: 0;
   }
 
-  &.headroom--unpinned{
+  &.headroom--unpinned {
     top: -$paradeiser-height;
     @media (min-width: $paradeiser-visible-until) {
       top: -$paradeiser-height-desktop;
     }
   }
 
-  @if($paradeiser-mobile-only){
+  @if($paradeiser-mobile-only) {
     display: none;
     @media (max-width: $paradeiser-visible-until) {
       display: flex;
@@ -46,10 +48,9 @@ body{
     height: $paradeiser-height-desktop;
   }
 
-  backdrop-filter: blur(10px) saturate(100%);
-
   a, .paradeiser_dropdown {
     position: relative;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -61,15 +62,14 @@ body{
     font-size: $paradeiser-link-font-size;
     font-family: $paradeiser-font-family;
     cursor: pointer;
-    z-index: 5;
-
-    @media (min-width: $paradeiser-visible-until) {
-      font-size: $paradeiser-link-font-size-desktop;
-    }
 
     align-items: center;
     flex-grow: 5;
     justify-content: center;
+
+    @media (min-width: $paradeiser-visible-until) {
+      font-size: $paradeiser-link-font-size-desktop;
+    }
 
     &.active, &:hover {
       background: $paradeiser-link-color-active;
@@ -82,8 +82,8 @@ body{
     margin: 0 auto;
     width: 100%;
     height: 20px;
-    text-align: center;
     color: #000;
+    text-align: center;
 
     align-items: center;
     justify-content: center;
@@ -122,12 +122,6 @@ body{
     position: fixed;
     top: $paradeiser-height;
     bottom: 0;
-    pointer-events: none;
-
-    @media (min-width: $paradeiser-visible-until) {
-      top: $paradeiser-height-desktop;
-    }
-
     left: 0;
     z-index: 998;
     visibility: hidden;
@@ -138,6 +132,11 @@ body{
     text-align: center;
     opacity: 0;
     transition: opacity 0.4s;
+    pointer-events: none;
+
+    @media (min-width: $paradeiser-visible-until) {
+      top: $paradeiser-height-desktop;
+    }
     &:target, &.open {
       visibility: visible;
       opacity: 1;
@@ -145,9 +144,9 @@ body{
       pointer-events: auto;
     }
     li {
-      background: $paradeiser-dropdown-background;
       display: inline-block;
       width: 100%;
+      background: $paradeiser-dropdown-background;
       text-align: center;
       a {
         display: inline-block;
@@ -165,31 +164,32 @@ body{
 
     // paradeiser-greybox
     li:last-child {
-      background: transparent;
       height: 100%;
+      background: transparent;
       a {
         display: block;
         height: 100%;
         background: rgba(0,0,0,0.8);
+
         backdrop-filter: blur(10px) saturate(100%);
       }
     }
   }
 }
 
-.paradeiser-hidden-phone{
+.paradeiser-hidden-phone {
   @media (max-width: $paradeiser-break-small) {
     display: none !important;
   }
 }
 
-.paradeiser-hidden-tablet{
+.paradeiser-hidden-tablet {
   @media (min-width: $paradeiser-break-small + 1) and (max-width: $paradeiser-break-medium) {
     display: none !important;
   }
 }
 
-.paradeiser-hidden-desktop{
+.paradeiser-hidden-desktop {
   @media (min-width: $paradeiser-break-medium + 1) {
     display: none !important;
   }
