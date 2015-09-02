@@ -240,8 +240,8 @@
     </a>
 
     <!-- and include the dropdown aswell -->
-    <span class="paradeiser_dropdown" id="paradeiser-dropdown">
-        <a href="#paradeiser-more" id="dropdown-trigger">
+    <span class="paradeiser_dropdown">
+        <a href="#paradeiser-more" id="paradeiser-dropdown">
             <div class="paradeiser_icon_canvas">
                 <img src="img/menu_overflow.svg" alt="">
             </div>
@@ -389,7 +389,7 @@
 
     &lt;!-- and include the dropdown aswell -->
     &lt;span class="paradeiser_dropdown">
-        &lt;a href="#paradeiser-more" id="dropdown-trigger">
+        &lt;a href="#paradeiser-more" id="paradeiser-dropdown">
             &lt;div class="paradeiser_icon_canvas">
                 &lt;img src="img/menu_overflow.svg" alt="">
             &lt;/div>
@@ -420,7 +420,7 @@
 <pre><code class="language-javascript">
     // enabling to open the overflow menu as the pure css link
     // would toggle a scroll and therefore hide the menu
-    document.getElementById("dropdown-trigger").addEventListener("click", function(event){
+    document.getElementById("paradeiser-dropdown").addEventListener("click", function(event){
         // stopping the scroll
         event.preventDefault();
         // toggling the class
@@ -461,7 +461,7 @@
 <script>
 // enabling to open the overflow menu as the pure css link
 // would toggle a scroll and therefore hide the menu
-document.getElementById("dropdown-trigger").addEventListener("click", function(event){
+document.getElementById("paradeiser-dropdown").addEventListener("click", function(event){
     // stopping the scroll
     event.preventDefault();
     // toggling the class
