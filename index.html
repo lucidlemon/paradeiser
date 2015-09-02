@@ -163,6 +163,7 @@
 
         .full-width{
             width: 100%;
+            clear: both;
         }
 
         .half-width{
@@ -239,7 +240,7 @@
     </a>
 
     <!-- and include the dropdown aswell -->
-    <span class="paradeiser_dropdown">
+    <span class="paradeiser_dropdown" id="paradeiser-dropdown">
         <a href="#paradeiser-more">
             <div class="paradeiser_icon_canvas">
                 <img src="img/menu_overflow.svg" alt="">
@@ -252,7 +253,7 @@
             <li class="paradeiser-hidden-desktop"><a href="#">Hidden on desktop</a></li>
             <li class="paradeiser-hidden-tablet"><a href="#">Hidden on tablet</a></li>
             <li class="paradeiser-hidden-phone"><a href="#">Hidden on phone</a></li>
-            <li><a href="#!"></a></li>
+            <li id="greybox"><a href="#!"></a></li>
         </ul>
     </span>
 </nav>
@@ -348,6 +349,11 @@
             <p>Paradeiser is designed to be used on Mobile Screens as well as Desktops. To further improve your navigation hiding classes are here to use: Hide certain links on mobile and put them into the overflow and vice versa.</p>
         </div>
 
+        <div class="full-width">
+            <h3>Automatic hiding of the navbar using Headroom.js</h3>
+            <p>Although Paradeiser itself is usable without any JS at all, Headroom.js enhances its experience a lot by providing automatic hiding on scrolling, as you can see on this page. The implementation is fairly simple, be sure to check out <a href="https://github.com/lucidlemon/paradeiser/blob/master/demo/demo5.html" target="_blank">the demo</a> for an in-depth demo on this topic.</p>
+        </div>
+
         <div class="cf"></div>
     </div>
 
@@ -374,7 +380,7 @@
     &lt;!-- paste in as many links as you want -->
 
     &lt;!-- and include the dropdown aswell -->
-    &lt;span class="paradeiser_dropdown">
+    &lt;span class="paradeiser_dropdown" id="paradeiser-dropdown">
         &lt;a href="#paradeiser-more">
             &lt;div class="paradeiser_icon_canvas">
                 &lt;img src="img/menu_overflow.svg" alt="">
@@ -388,10 +394,40 @@
             &lt;li class="paradeiser-hidden-desktop">&lt;a href="#">Hidden on desktop&lt;/a>&lt;/li>
             &lt;li class="paradeiser-hidden-tablet">&lt;a href="#">Hidden on tablet&lt;/a>&lt;/li>
             &lt;li class="paradeiser-hidden-phone">&lt;a href="#">Hidden on phone&lt;/a>&lt;/li>
-            &lt;li>&lt;a href="#!">&lt;/a>&lt;/li>
+            &lt;li id="greybox">&lt;a href="#!">&lt;/a>&lt;/li>
         &lt;/ul>
     &lt;/span>
 &lt;/nav>
+</code></pre>
+    </div>
+
+<div class="center hero">
+        <h3>Optional: Turn on automatic hiding of the navbar using Headroom.js</h3>
+<pre><code class="language-markup">
+    &lt;script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js">&lt;/script>
+</code></pre>
+
+    <p>And then</p>
+
+<pre><code class="language-javascript">
+    // enabling to open the overflow menu as the pure css link
+    // would toggle a scroll and therefore hide the menu
+    document.getElementById("paradeiser-dropdown").addEventListener("click", function(event){
+        // stopping the scroll
+        event.preventDefault();
+        // toggling the class
+        document.getElementById("paradeiser-more").classList.toggle("open");
+    });
+
+    // enabling headroom
+    var myElement = document.querySelector(".paradeiser");
+    var headroom  = new Headroom(myElement, {
+        tolerance : 5,
+        onUnpin : function() {
+            document.getElementById("paradeiser-more").classList.remove("open");
+        }
+    });
+    headroom.init();
 </code></pre>
 </div>
 
@@ -404,6 +440,29 @@
 
 
 <script src="prism.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
+<script>
+
+    // enabling to open the overflow menu as the pure css link
+    // would toggle a scroll and therefore hide the menu
+    document.getElementById("paradeiser-dropdown").addEventListener("click", function(event){
+        // stopping the scroll
+        event.preventDefault();
+        // toggling the class
+        document.getElementById("paradeiser-more").classList.toggle("open");
+    });
+
+    // enabling headroom
+    var myElement = document.querySelector(".paradeiser");
+    var headroom  = new Headroom(myElement, {
+        tolerance : 5,
+        onUnpin : function() {
+            document.getElementById("paradeiser-more").classList.remove("open");
+        }
+    });
+    headroom.init();
+</script>
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
