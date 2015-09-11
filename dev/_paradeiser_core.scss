@@ -23,6 +23,7 @@ body {
   transition: top 0.4s ease;
 
   backdrop-filter: blur(10px) saturate(100%);
+  -webkit-backdrop-filter: blur(10px) saturate(100%);
 
   &.headroom--pinned {
     top: 0;
