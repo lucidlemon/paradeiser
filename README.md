@@ -1,5 +1,7 @@
 # Paradeiser
 
+![Bower Version](https://img.shields.io/bower/v/Paradeiser.svg)
+
 ### The only menu you will ever need to kill the hamburger.
 
 Paradeiser is a slim package for dealing with one of the major problems in responsive webdesign: The navigation.
@@ -48,7 +50,7 @@ There is also basic support for hiding on scroll, which is implemented via [Head
 ```
 paradeiser/
 └── dist/
-    └── min/ 
+    └── min/
 	    └── paradeiser.min.css
 ```
 
@@ -146,4 +148,3 @@ Added paradeiser-hidden-* classes for hiding links on different devices. This wa
 
 ### v 0.1.0
 Paradeiser is now visible on Desktop systems aswell, if you want to supress this behaviour, just set the `$paradeiser-mobile-only` variable to true while importing the paradeiser_variables.
-
