@@ -1,0 +1,22 @@
+{
+  "name": "paradeiser-gh-page",
+  "version": "0.3.1",
+  "main": "gruntfile.js",
+  "dependencies": {
+    "grunt-zip": "^0.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucidlemon/paradeiser.git"
+  },
+  "author": "Daniel Winter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucidlemon/paradeiser/issues"
+  },
+  "homepage": "https://github.com/lucidlemon/paradeiser#readme"
+}
