@@ -43,7 +43,7 @@ module.exports = function(grunt) {
             },
             your_target: {
                 files: {
-                    'dev/_paradeiser_core.scss': ['dev/paradeiser.scss'],
+                    'dev/paradeiser.scss': ['dev/paradeiser.scss'],
                 }
             }
         },

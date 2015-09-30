@@ -1,22 +1,35 @@
+// the background of the whole paradeiser navigation, is slightly transparent as it
+// includes a webkit background blur by default
 $paradeiser-background: rgba(255,255,255,0.95) !default;
 $paradeiser-link-color: #9b9b9b !default;
 
+// the small break, used to shrink down the font a bit and reduce the navbar height in $paradeiser-height
 $paradeiser-break-small: 760px !default;
 $paradeiser-break-medium: 1025px !default;
 
+// your primary color for your application. Used to mix a slight tone into the active links
 $primary: #97d3e7 !default;
 $paradeiser-link-color-active: mix($primary, #fff, 20%) !default;
 
+// uses a 10px font size for smartphones and tablets, which is enough as nearly all of them
+// have hidpi screens, and 13px for desktops as they have more screen estate anyways
 $paradeiser-link-font-size: 10px !default;
 $paradeiser-link-font-size-desktop: 13px !default;
 $paradeiser-dropdown-background: #4a4a4a !default;
 $paradeiser-visible-until: 768px !default;
+// paradeiser height on phones and tablets, and a bit bigger on desktops
 $paradeiser-height: 50px !default;
 $paradeiser-height-desktop: 60px !default;
+// set this to true if you want to hide paradeiser on tablets and desktops
+// as you have your own implementation for these screens
 $paradeiser-mobile-only: false !default;
 
+// using san francsico on iOS9 and OSX 10.11 onwards.
 $paradeiser-font-family: -apple-system, -apple-system-body, 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Arial', sans-serif !default;
 $paradeiser-font-weight: 400 !default;
+
+// determines the maximum size for icons, turn this up if you want your icons to be bigger
+$paradeiser-icons-max-width: 20px;
 
 
 body {
@@ -43,8 +56,8 @@ body {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.02), 0 2px 10px 0 rgba(0,0,0,0.10);
   transition: top 0.4s ease;
 
-  backdrop-filter: blur(10px) saturate(100%);
   -webkit-backdrop-filter: blur(10px) saturate(100%);
+          backdrop-filter: blur(10px) saturate(100%);
 
   &.headroom--pinned {
     top: 0;
@@ -112,7 +125,7 @@ body {
     img {
       display: block;
       margin: 0 auto;
-      max-width: 20px;
+      max-width: $paradeiser-icons-max-width;
       width: 100%;
       height: auto;
     }
