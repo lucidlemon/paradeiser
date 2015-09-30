@@ -102,7 +102,7 @@ For further demonstration, visit the [Demo pages](demo/)
         <span>Contact</span>
     </a>
     <!-- and include the dropdown aswell -->
-    <span class="paradeiser_dropdown">
+    <div class="paradeiser_dropdown">
         <a href="#paradeiser-more">
             <icon class="paradeiser_icon_canvas">
                 <img src="img/menu_overflow.svg" alt="">
@@ -118,7 +118,7 @@ For further demonstration, visit the [Demo pages](demo/)
             <li class="paradeiser-hidden-phone"><a href="#">Hidden on phone</a></li>
             <li><a href="#!"></a></li>
         </ul>
-    </span>
+    </div>
 </nav>
 ```
 
