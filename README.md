@@ -135,6 +135,10 @@ Paradeiser is Austrian for tomato, I just thought it might sound cool, and it ha
 
 ## Changelog
 
+### v 0.3.0
+Changing the dropdown from `span` to `div` to act like we care about validation as proposed in #13.
+Refactoring the scss again, now only one file as every variable is set to !default anyhow and can be overwritten pretty easily and documented every relevant part.
+
 ### v 0.2.5.
 As suggested in #9 hiding on scrolling is now implemented with [Headroom.js](https://github.com/WickyNilliams/headroom.js), but there are still bugs with the overflow menu. If you don't use the overflow though, you can get a [demo here](demo/demo4.html).
 I included headroom.js via the Cloudflare CDN, so no additional download is needed. Paradeiser itself stays JS free.
