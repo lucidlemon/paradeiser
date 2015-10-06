@@ -18,8 +18,8 @@ body {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.02), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: top 0.4s ease;
           transition: top 0.4s ease;
-  backdrop-filter: blur(10px) saturate(100%);
   -webkit-backdrop-filter: blur(10px) saturate(100%);
+  backdrop-filter: blur(10px) saturate(100%);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -105,7 +105,7 @@ body {
 }
 .paradeiser .paradeiser_icon_canvas img {
   display: block;
-  margin: 0 auto;
+  margin: 0;
   max-width: 20px;
   width: 100%;
   height: auto;
