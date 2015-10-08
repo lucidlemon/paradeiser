@@ -63,6 +63,13 @@ Within your head or wherever you might find it suits you, include the source fil
 <link rel="stylesheet" href="path-to/paradeiser.min.css">
 ```
 
+or if you feel confident to try some new stuff you could also link it through my cdn:
+*I have not yet tested this myself enough, feel free to do so though. It should work perfectly fine.*
+
+```html
+<link rel="stylesheet" href="//cdn.danielwinter.at/paradeiser/min/paradeiser.min.css">
+```
+
 And then place this stuff right below your `<body>` opening tag:
 
 For further demonstration, visit the [Demo pages](demo/)
