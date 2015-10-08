@@ -142,6 +142,9 @@ Paradeiser is Austrian for tomato, I just thought it might sound cool, and it ha
 
 ## Changelog
 
+### v 0.4.0
+Paradeiser is now available on my CDN as well, I will add it to the cdnjs CDN hosted by cloudflare also, maybe they'll accept it.
+
 ### v 0.3.0
 Changing the dropdown from `span` to `div` to act like we care about validation as proposed in #13.
 Refactoring the scss again, now only one file as every variable is set to !default anyhow and can be overwritten pretty easily and documented every relevant part.
