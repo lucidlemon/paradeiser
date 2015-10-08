@@ -3,7 +3,8 @@
   "version": "0.4.0",
   "description": "Paradeiser is an easy to use menu for mobile views",
   "main": "dist/min/paradeiser.min.css",
-  "private": true,
+  "private": false,
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer-core": "^5.2.0",
     "csswring": "^3.0.5",
