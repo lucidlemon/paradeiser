@@ -75,7 +75,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .paradeiser a, .paradeiser .paradeiser_dropdown {
     font-size: 13px;
   }
@@ -114,7 +114,7 @@ body {
   margin-top: 5px;
   font-size: 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .paradeiser span {
     font-size: 13px;
   }
