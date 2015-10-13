@@ -37,7 +37,7 @@ Thanks to [andreruffert](https://github.com/andreruffert) Paradeiser is now CSS 
 
 ### Automatic Hiding on scroll
 
-There is also basic support for hiding on scroll, which is implemented via [Headroom.js](https://github.com/WickyNilliams/headroom.js), see [demo 4](demo/demo4.html) for details on the implementation.
+There is also basic support for hiding on scroll, which is implemented via [Headroom.js](https://github.com/WickyNilliams/headroom.js), see [demo 4](demo/demo4.html) ([Source Code](demo/demo4.html)) for details on the implementation.
 
 ## Install via bower
 
