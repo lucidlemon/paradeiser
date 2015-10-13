@@ -37,7 +37,7 @@ Thanks to [andreruffert](https://github.com/andreruffert) Paradeiser is now CSS 
 
 ### Automatic Hiding on scroll
 
-There is also basic support for hiding on scroll, which is implemented via [Headroom.js](https://github.com/WickyNilliams/headroom.js), see [demo 4](demo/demo4.html) ([Source Code](demo/demo4.html)) for details on the implementation.
+There is also basic support for hiding on scroll, which is implemented via [Headroom.js](https://github.com/WickyNilliams/headroom.js), see [demo 4](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo4.html) ([Source Code](demo/demo4.html)) for details on the implementation.
 
 ## Install via bower
 
@@ -74,9 +74,13 @@ And then place this stuff right below your `<body>` opening tag:
 
 For further demonstration, visit the [Demo pages](demo/)
 
-* [Simple, pure CSS](demo/demo1.html)
-* [With basic overflow](demo/demo2.html)
-* [With overflow and text as Icon as well as hiding links based on device size!](demo/demo3.html)
+
+
+* [Simple, pure CSS](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo1.html) ([Source Code](demo/demo1.html))
+* [With basic overflow](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo2.html) ([Source Code](demo/demo2.html))
+* [With overflow and text as Icon as well as hiding links based on device size!](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo3.html) ([Source Code](demo/demo3.html))
+* [Automatic Hiding of Paradeiser using Headroom.js + Overflow (JS)](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo4.html) ([Source Code](demo/demo4.html))
+* [Automatic Hiding of Paradeiser using Headroom.js (JS)](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo5.html) ([Source Code](demo/demo5.html))
 
 
 ```html
