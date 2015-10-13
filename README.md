@@ -154,7 +154,7 @@ Changing the dropdown from `span` to `div` to act like we care about validation 
 Refactoring the scss again, now only one file as every variable is set to !default anyhow and can be overwritten pretty easily and documented every relevant part.
 
 ### v 0.2.5.
-As suggested in #9 hiding on scrolling is now implemented with [Headroom.js](https://github.com/WickyNilliams/headroom.js), but there are still bugs with the overflow menu. If you don't use the overflow though, you can get a [demo here](demo/demo4.html).
+As suggested in #9 hiding on scrolling is now implemented with [Headroom.js](https://github.com/WickyNilliams/headroom.js), but there are still bugs with the overflow menu. If you don't use the overflow though, you can get a [demo 4](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo4.html) ([Source Code](demo/demo4.html)).
 I included headroom.js via the Cloudflare CDN, so no additional download is needed. Paradeiser itself stays JS free.
 
 ### v 0.2.0
