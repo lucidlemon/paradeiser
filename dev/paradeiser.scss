@@ -102,7 +102,7 @@ body {
     flex-grow: 5;
     justify-content: center;
 
-    @media (min-width: $paradeiser-visible-until) {
+    @media (min-width: $paradeiser-break-medium) {
       font-size: $paradeiser-link-font-size-desktop;
     }
 
@@ -135,7 +135,7 @@ body {
     margin-top: 5px;
     font-size: $paradeiser-link-font-size;
 
-    @media (min-width: $paradeiser-visible-until) {
+    @media (min-width: $paradeiser-break-medium) {
       font-size: $paradeiser-link-font-size-desktop;
     }
 
