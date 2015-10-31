@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
     require('jit-grunt')(grunt);
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     grunt.initConfig({
         sass: {
@@ -16,22 +17,33 @@ module.exports = function(grunt) {
         postcss: {
             options: {
                 processors: [
-                    require('autoprefixer-core')({browsers: ['last 5 versions', 'ie 8', 'ie 9']}),
-                    require('csswring')
+                    require('autoprefixer-core')({browsers: ['last 5 versions', 'ie 8', 'ie 9']})
                 ]
             },
             dist: {
                 src: ['dist/paradeiser.css'],
-                dest: 'dist/min/paradeiser.min.css'
+                dest: 'dist/paradeiser.css'
             }
         },
-        csscomb: {
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    'dist/min/paradeiser.min.css': ['dist/paradeiser.css']
+                }
+            }
+        },
+        csscomb:
+        {
             options: {
                 // Task-specific options go here.
             },
             your_target: {
                 files: {
-                    'dev/_paradeiser_core.scss': ['dev/_paradeiser_core.scss'],
+                    'dev/paradeiser.scss': ['dev/paradeiser.scss'],
                 }
             }
         },
@@ -48,22 +60,11 @@ module.exports = function(grunt) {
         bump: {
             options: {
                 files: ['package.json', 'bower.json'],
-                updateConfigs: [],
-                commit: true,
-                commitMessage: 'Release v%VERSION%',
                 commitFiles: ['-a'],
-                createTag: true,
-                tagName: 'v%VERSION%',
-                tagMessage: 'Version %VERSION%',
-                push: true,
-                pushTo: 'paradeiser',
-                gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
-                globalReplace: false,
-                prereleaseName: false,
-                regExp: false
+                pushTo: 'origin'
             }
         }
     });
 
-    grunt.registerTask('default', ['sass', 'postcss']);
+    grunt.registerTask('default', ['sass', 'postcss', 'cssmin']);
 };

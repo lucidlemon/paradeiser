@@ -1,5 +1,7 @@
 # Paradeiser
 
+![Bower Version](https://img.shields.io/bower/v/Paradeiser.svg)
+
 ### The only menu you will ever need to kill the hamburger.
 
 Paradeiser is a slim package for dealing with one of the major problems in responsive webdesign: The navigation.
@@ -33,6 +35,10 @@ You may also adjust the sizes etc by overwriting the variables of the scss file.
 
 Thanks to [andreruffert](https://github.com/andreruffert) Paradeiser is now CSS only.
 
+### Automatic Hiding on scroll
+
+There is also basic support for hiding on scroll, which is implemented via [Headroom.js](https://github.com/WickyNilliams/headroom.js), see [demo 4](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo4.html) ([Source Code](demo/demo4.html)) for details on the implementation.
+
 ## Install via bower
 
 `bower install Paradeiser --save`
@@ -44,7 +50,7 @@ Thanks to [andreruffert](https://github.com/andreruffert) Paradeiser is now CSS 
 ```
 paradeiser/
 └── dist/
-    └── min/ 
+    └── min/
 	    └── paradeiser.min.css
 ```
 
@@ -57,13 +63,24 @@ Within your head or wherever you might find it suits you, include the source fil
 <link rel="stylesheet" href="path-to/paradeiser.min.css">
 ```
 
+or if you feel confident to try some new stuff you could also link it through my cdn:
+*I have not yet tested this myself enough, feel free to do so though. It should work perfectly fine.*
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paradeiser/0.4.2/min/paradeiser.min.css">
+```
+
 And then place this stuff right below your `<body>` opening tag:
 
 For further demonstration, visit the [Demo pages](demo/)
 
-* [Simple, pure CSS](demo/demo1.html)
-* [With basic overflow](demo/demo2.html)
-* [With overflow and text as Icon as well as hiding links based on device size!](demo/demo3.html)
+
+
+* [Simple, pure CSS](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo1.html) ([Source Code](demo/demo1.html))
+* [With basic overflow](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo2.html) ([Source Code](demo/demo2.html))
+* [With overflow and text as Icon as well as hiding links based on device size!](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo3.html) ([Source Code](demo/demo3.html))
+* [Automatic Hiding of Paradeiser using Headroom.js + Overflow (JS)](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo4.html) ([Source Code](demo/demo4.html))
+* [Automatic Hiding of Paradeiser using Headroom.js (JS)](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo5.html) ([Source Code](demo/demo5.html))
 
 
 ```html
@@ -96,7 +113,7 @@ For further demonstration, visit the [Demo pages](demo/)
         <span>Contact</span>
     </a>
     <!-- and include the dropdown aswell -->
-    <span class="paradeiser_dropdown">
+    <div class="paradeiser_dropdown">
         <a href="#paradeiser-more">
             <icon class="paradeiser_icon_canvas">
                 <img src="img/menu_overflow.svg" alt="">
@@ -112,7 +129,7 @@ For further demonstration, visit the [Demo pages](demo/)
             <li class="paradeiser-hidden-phone"><a href="#">Hidden on phone</a></li>
             <li><a href="#!"></a></li>
         </ul>
-    </span>
+    </div>
 </nav>
 ```
 
@@ -129,12 +146,23 @@ Paradeiser is Austrian for tomato, I just thought it might sound cool, and it ha
 
 ## Changelog
 
-### v 0.1.0
-Paradeiser is now visible on Desktop systems aswell, if you want to supress this behaviour, just set the `$paradeiser-mobile-only` variable to true while importing the paradeiser_variables.
+### v 0.4.0
+Paradeiser is now available on my CDN as well, I will add it to the cdnjs CDN hosted by cloudflare also, maybe they'll accept it.
 
-### v 0.1.2
-Added paradeiser-hidden-* classes for hiding links on different devices. This way you can move links from the navbar to the overflow menu when switching to mobile
+### v 0.3.0
+Changing the dropdown from `span` to `div` to act like we care about validation as proposed in #13.
+Refactoring the scss again, now only one file as every variable is set to !default anyhow and can be overwritten pretty easily and documented every relevant part.
+
+### v 0.2.5.
+As suggested in #9 hiding on scrolling is now implemented with [Headroom.js](https://github.com/WickyNilliams/headroom.js), but there are still bugs with the overflow menu. If you don't use the overflow though, you can get a [demo 4](http://lucidlemon.github.io/paradeiser/bower_components/Paradeiser/demo/demo4.html) ([Source Code](demo/demo4.html)).
+I included headroom.js via the Cloudflare CDN, so no additional download is needed. Paradeiser itself stays JS free.
 
 ### v 0.2.0
 Paradeiser is now CSS only, thanks to [andreruffert](https://github.com/andreruffert) and the CSS `:target` selector.
 Mind the reworked HTML Markup.
+
+### v 0.1.2
+Added paradeiser-hidden-* classes for hiding links on different devices. This way you can move links from the navbar to the overflow menu when switching to mobile
+
+### v 0.1.0
+Paradeiser is now visible on Desktop systems aswell, if you want to supress this behaviour, just set the `$paradeiser-mobile-only` variable to true while importing the paradeiser_variables.
