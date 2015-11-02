@@ -185,6 +185,14 @@ body {
   backdrop-filter: blur(10px) saturate(100%);
 }
 
+/**
+* Enabling hiding links based on viewport size
+* --
+* This is especially useful if you want to enable more points
+* in your desktop version straight visible to the user,
+* but they are not that important for mobile users, so you hide them
+* into the overflow button.
+*/
 @media (max-width: 760px) {
   .paradeiser-hidden-phone {
     display: none !important;

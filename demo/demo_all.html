@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paradeiser Demo Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700|Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <style>
+
+
+        .content, *{
+            font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+        }
+        body, html{
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            margin: 2em;
+        }
+
+        h1{
+            margin-top: 60px;
+            font-size: 22px;
+        }
+
+        .wrapper{
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .text--center{
+            text-align: center;
+        }
+
+        .hero{
+
+        }
+
+
+        /* Browser mockup code
+         * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
+         * Live example: https://updown.io
+         */
+
+        .browser-mockup {
+            border-top: 2em solid rgba(230, 230, 230, 0.7);
+            box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
+            position: relative;
+            border-radius: 3px 3px 0 0;
+            /*min-height: 400px;*/
+        }
+
+        .browser-mockup.mobile {
+            width: 375px;
+            margin: 0 auto;
+        }
+
+        .browser-mockup.mobile p {
+            text-align: center;
+            font-size: 0.7em;
+        }
+
+        .browser-mockup:before {
+            display: block;
+            position: absolute;
+            content: '';
+            top: -1.25em;
+            left: 1em;
+            width: 0.5em;
+            height: 0.5em;
+            border-radius: 50%;
+            background-color: #f44;
+            box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+        }
+
+        .browser-mockup.with-tab:after {
+            display: block;
+            position: absolute;
+            content: '';
+            top: -2em;
+            left: 5.5em;
+            width: 20%;
+            height: 0em;
+            border-bottom: 2em solid white;
+            border-left: 0.8em solid transparent;
+            border-right: 0.8em solid transparent;
+        }
+
+        .browser-mockup.with-url:after {
+            display: block;
+            position: absolute;
+            content: '';
+            top: -1.6em;
+            left: 5.5em;
+            width: calc(100% - 6em);
+            height: 1.2em;
+            border-radius: 2px;
+            background-color: white;
+        }
+
+        .browser-mockup > * {
+            display: block;
+        }
+
+        .browser-mockup {
+            margin: 2em;
+            flex: 1;
+        }
+
+        .browser-mockup div {
+            position: relative;
+            width: 100%;
+        }
+
+        .browser-mockup div iframe{
+            width: 100%;
+            min-height: 560px;
+        }
+
+        /**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+        .cf:before,
+        .cf:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        /**
+         * For IE 6/7 only
+         * Include this rule to trigger hasLayout and contain floats.
+         */
+        .cf {
+            *zoom: 1;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="../dist/min/paradeiser.min.css">
+</head>
+<body>
+    <nav class="paradeiser">
+        <a href="#">
+            <icon class="paradeiser_icon_canvas">
+                <img src="img/menu_home.svg" alt="Navigate to Home" class="icon">
+            </icon>
+            <span>Home</span>
+        </a>
+        <a href="#demo1" class="paradeiser_icon--disabled--desktop">
+            <icon class="paradeiser_icon_canvas">
+                <img src="img/menu_shop.svg" alt="Navigate to Shop" class="icon">
+            </icon>
+            <span>Demo 1</span>
+        </a>
+        <a href="#demo2">
+            <icon class="paradeiser_icon_canvas">
+                <img src="img/menu_cart.svg" alt="Navigate to Cart" class="icon">
+            </icon>
+            <span>Demo 2</span>
+        </a>
+        <a href="#">
+            <icon class="paradeiser_icon_canvas">
+                <img src="img/menu_contact.svg" alt="Navigate to Contact" class="icon">
+            </icon>
+            <span>Demo 3</span>
+        </a>
+    </nav>
+
+    <div class="wrapper hero">
+        <div class="content text--center">
+            <h1>Paradeiser - Playground</h1>
+            <p>One Nav to rule them all</p>
+        </div>
+    </div>
+
+    <section id="demo1">
+        <div class="wrapper">
+            <div class="content text--center">
+                <h1>Demo 1</h1>
+                <p>Classic Paradeiser without a dropdown, it can't get easier than that.</p>
+
+                <label>
+                    <input type="radio" name="mode_demo1" value="desktop" selected>
+                    Desktop
+                </label>
+                <label>
+                    <input type="radio" name="mode_demo1" value="mobile">
+                    Mobile
+                </label>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <div class="browser-mockup cf">
+                    <div>
+                        <iframe src="demo1.html" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <div class="content">
+                    <h2>Requirements</h2>
+
+                    <p>none. pure CSS.</p>
+
+                    <h2>Code</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="//code.jquery.com/jquery-2.1.4.js"></script>
+
+    <script>
+        $(function() {
+            $('input[type=radio]').on('click select', function(event){
+                if($(this).val() == 'mobile'){
+                    console.log('displaying mobile version');
+                    $(this).closest('section').find('.browser-mockup').addClass('mobile');
+                } else {
+                    console.log('meh, desktop');
+                    $(this).closest('section').find('.browser-mockup').removeClass('mobile');
+                }
+            });
+
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top - 100
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+
+    </script>
+</body>
+</html>

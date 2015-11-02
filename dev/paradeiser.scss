@@ -56,13 +56,17 @@ body {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.02), 0 2px 10px 0 rgba(0,0,0,0.10);
   transition: top 0.4s ease;
 
+  // enables iOS-like background blurring as seen in iOS 7, available
+  // as a CSS component since iOS 9.
   -webkit-backdrop-filter: blur(10px) saturate(100%);
           backdrop-filter: blur(10px) saturate(100%);
 
+  // fully visible paradeiser while it is pinned with headroom.js
   &.headroom--pinned {
     top: 0;
   }
 
+  // and hiding the nav while headroom forces it to.
   &.headroom--unpinned {
     top: -$paradeiser-height;
     @media (min-width: $paradeiser-visible-until) {
@@ -83,6 +87,7 @@ body {
     height: $paradeiser-height-desktop;
   }
 
+  // basically the appearance of all links within the top-nav of paradeiser
   a, .paradeiser_dropdown {
     position: relative;
     z-index: 5;
@@ -111,6 +116,8 @@ body {
     }
   }
 
+  // created a fixed space for the icons within the nav for
+  // better vertical centering
   .paradeiser_icon_canvas {
     display: block;
     display: flex;
@@ -131,6 +138,7 @@ body {
     }
   }
 
+  // the text of each link, includes a margin top for a little more whitespace
   span {
     margin-top: 5px;
     font-size: $paradeiser-link-font-size;
@@ -210,6 +218,19 @@ body {
     }
   }
 }
+
+
+
+
+
+/**
+* Enabling hiding links based on viewport size
+* --
+* This is especially useful if you want to enable more points
+* in your desktop version straight visible to the user,
+* but they are not that important for mobile users, so you hide them
+* into the overflow button.
+*/
 
 .paradeiser-hidden-phone {
   @media (max-width: $paradeiser-break-small) {
