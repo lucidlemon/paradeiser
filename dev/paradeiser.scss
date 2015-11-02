@@ -8,8 +8,8 @@ $paradeiser-break-small: 760px !default;
 $paradeiser-break-medium: 1025px !default;
 
 // your primary color for your application. Used to mix a slight tone into the active links
-$primary: #97d3e7 !default;
-$paradeiser-link-color-active: mix($primary, #fff, 20%) !default;
+$paradeiser-primary-color: #97d3e7 !default;
+$paradeiser-link-color-active: mix($paradeiser-primary-color, #fff, 20%) !default;
 
 // uses a 10px font size for smartphones and tablets, which is enough as nearly all of them
 // have hidpi screens, and 13px for desktops as they have more screen estate anyways
