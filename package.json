@@ -16,6 +16,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-csscomb": "^3.0.1",
     "grunt-postcss": "^0.5.1",
+    "grunt-browser-sync": "*",
     "jit-grunt": "^0.9.1"
   }
 }

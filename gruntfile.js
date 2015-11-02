@@ -57,6 +57,17 @@ module.exports = function(grunt) {
                 }
             }
         },
+        browserSync: {
+            bsFiles: {
+                src : ['dist/*.css', 'demo/*.html']
+            },
+            options: {
+                watchTask: true,
+                server: {
+                    baseDir: "./"
+                }
+            }
+        },
         bump: {
             options: {
                 files: ['package.json', 'bower.json'],
@@ -67,4 +78,5 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('default', ['sass', 'postcss', 'cssmin']);
+    grunt.registerTask('live', ['sass', 'postcss', 'cssmin', 'browserSync', 'watch']);
 };
