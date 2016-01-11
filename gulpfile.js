@@ -10,27 +10,76 @@ var merge = require('merge-stream');
 var sourcemaps = require('gulp-sourcemaps');
 var bump = require('gulp-bump');
 
-//react for demo
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var react = require('gulp-react');
+var notify = require("gulp-notify");
+var fs = require('fs');
+
 var htmlreplace = require('gulp-html-replace');
 
+var browserify = require('browserify');
+//var browserify = require('browserify-middleware');
+var babelify = require('babelify');
+var reactify = require('reactify');
+var source = require('vinyl-source-stream');
+var rimraf = require('rimraf');
+var watchify = require('watchify');
+var _ = require('lodash');
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
+
+
+
 var path = {
-    HTML: 'demo-src/index.html',
-    ALL: ['demo-src/js/*.js', 'demo-src/js/**/*.js', 'demo-src/index.html'],
-    JS: ['demo-src/js/*.js', 'demo-src/js/**/*.js'],
+    HTML: 'demo/index.html',
+    ALL: ['demo/src/*.js', 'demo/index.html'],
+    JS: ['demo/src/*.js'],
+    SRC_JS: 'demo/src/js',
     MINIFIED_OUT: 'build.min.js',
-    DEST_SRC: 'dist/demo-src',
+    DEST_SRC: 'demo/src',
     DEST_BUILD: 'demo/build',
     DEST: 'demo'
 };
 
-gulp.task('transform', function(){
-    gulp.src(path.JS)
-        .pipe(react())
-        .pipe(gulp.dest(path.DEST_SRC));
+var config = {
+    entryFile: './demo/src/main.js',
+    outputDir: './demo/build/',
+    outputFile: 'bundle.js'
+};
+
+
+
+
+// clean the output directory
+gulp.task('clean', function(cb){
+    rimraf(config.outputDir, cb);
 });
+
+var bundler;
+function getBundler() {
+    if (!bundler) {
+        bundler = watchify(browserify(config.entryFile, _.extend({ debug: true }, watchify.args)));
+    }
+    return bundler;
+};
+
+function bundle() {
+    return getBundler()
+        .transform(babelify)
+        .bundle()
+        .on('error', function(err) { console.log('Error: ' + err.message); })
+        .pipe(source(config.outputFile))
+        .pipe(gulp.dest(config.outputDir))
+        .pipe(reload({ stream: true }));
+}
+
+gulp.task('build-persistent', ['clean'], function() {
+    return bundle();
+});
+
+gulp.task('build', ['build-persistent'], function() {
+    process.exit(0);
+});
+
+
 
 gulp.task('copy', function(){
     gulp.src(path.HTML)
@@ -51,10 +100,6 @@ gulp.task('bump-major', function(){
     gulp.src(['./bower.json', './package.json'])
         .pipe(bump({type:'major'}))
         .pipe(gulp.dest('./'));
-});
-
-gulp.task('compile-paradeiser', function(){
-    gulp.exec(['transform', 'copy']);
 });
 
 gulp.task('compile-paradeiser', function(){
