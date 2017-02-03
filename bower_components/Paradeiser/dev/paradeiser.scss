@@ -8,8 +8,8 @@ $paradeiser-break-small: 760px !default;
 $paradeiser-break-medium: 1025px !default;
 
 // your primary color for your application. Used to mix a slight tone into the active links
-$primary: #97d3e7 !default;
-$paradeiser-link-color-active: mix($primary, #fff, 20%) !default;
+$paradeiser-primary-color: #97d3e7 !default;
+$paradeiser-link-color-active: mix($paradeiser-primary-color, #fff, 20%) !default;
 
 // uses a 10px font size for smartphones and tablets, which is enough as nearly all of them
 // have hidpi screens, and 13px for desktops as they have more screen estate anyways
@@ -102,7 +102,7 @@ body {
     flex-grow: 5;
     justify-content: center;
 
-    @media (min-width: $paradeiser-visible-until) {
+    @media (min-width: $paradeiser-break-medium) {
       font-size: $paradeiser-link-font-size-desktop;
     }
 
@@ -135,7 +135,7 @@ body {
     margin-top: 5px;
     font-size: $paradeiser-link-font-size;
 
-    @media (min-width: $paradeiser-visible-until) {
+    @media (min-width: $paradeiser-break-medium) {
       font-size: $paradeiser-link-font-size-desktop;
     }
 
@@ -152,7 +152,7 @@ body {
     width: 100%;
   }
 
-  ul {
+  ul.paradeiser_children {
     position: fixed;
     top: $paradeiser-height;
     bottom: 0;
