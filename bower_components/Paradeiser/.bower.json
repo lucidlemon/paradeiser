@@ -1,7 +1,7 @@
 {
   "name": "paradeiser",
   "location": "lucidlemon/paradeiser",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "license": "MIT",
   "description": "Paradeiser is an easy to use menu for mobile views",
   "homepage": "http://www.danielwinter.at/paradeiser",
@@ -20,13 +20,21 @@
     "!demo/demo4.html",
     "!demo/demo5.html",
     "!demo/img/menu_overflow.png",
-    "!demo/img/menu_overflow.svg"
+    "!demo/img/menu_overflow.svg",
+    "!demo/img/menu_cart.png",
+    "!demo/img/menu_cart.svg",
+    "!demo/img/menu_contact.png",
+    "!demo/img/menu_contact.svg",
+    "!demo/img/menu_home.png",
+    "!demo/img/menu_home.svg",
+    "!demo/img/menu_shop.png",
+    "!demo/img/menu_shop.svg"
   ],
-  "_release": "0.4.4",
+  "_release": "0.4.5",
   "_resolution": {
     "type": "version",
-    "tag": "v0.4.4",
-    "commit": "49a1704e500876e5385f0c4de673837a1bc314aa"
+    "tag": "v0.4.5",
+    "commit": "488946ab6a867f7174051166366e76bf0d7a90f3"
   },
   "_source": "https://github.com/lucidlemon/paradeiser.git",
   "_target": "*",

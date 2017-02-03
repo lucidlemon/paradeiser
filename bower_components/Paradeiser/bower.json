@@ -1,7 +1,7 @@
 {
   "name": "paradeiser",
   "location": "lucidlemon/paradeiser",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "license": "MIT",
   "description": "Paradeiser is an easy to use menu for mobile views",
   "homepage": "http://www.danielwinter.at/paradeiser",
@@ -20,6 +20,14 @@
     "!demo/demo4.html",
     "!demo/demo5.html",
     "!demo/img/menu_overflow.png",
-    "!demo/img/menu_overflow.svg"
+    "!demo/img/menu_overflow.svg",
+    "!demo/img/menu_cart.png",
+    "!demo/img/menu_cart.svg",
+    "!demo/img/menu_contact.png",
+    "!demo/img/menu_contact.svg",
+    "!demo/img/menu_home.png",
+    "!demo/img/menu_home.svg",
+    "!demo/img/menu_shop.png",
+    "!demo/img/menu_shop.svg"
   ]
 }
